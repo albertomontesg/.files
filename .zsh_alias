@@ -1,0 +1,36 @@
+# Directory navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ~="cd ~"
+alias -- -="cd -"
+
+# Shortcuts
+alias d="cd ~/Documents"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias dev="cd ~/Development"
+alias g="git"
+alias h="history"
+alias j="jobs"
+alias reload="source ~/.bash_profile"
+
+# ls's
+alias ls='ls -GFh'
+alias la='ls -a'
+alias ll='ls -l'
+alias las='ls -al'
+
+# View HTTP traffic
+#alias sniff
+
+# Software update
+alias update='brew update; brew upgrade --all; brew cleanup'
+alias pip-upgrade-all='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
+alias pip3-upgrade-all='pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U'
+
+# Temporal aliases for actual projects
+alias deep="cd ~/Development/DeepLearning"
+alias imatge='ssh imatge -t tmux attach'
+alias tunel='ssh -f imatge -L 8888:localhost:8888 -N'
