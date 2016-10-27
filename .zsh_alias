@@ -34,3 +34,13 @@ alias pip3-upgrade-all='pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | 
 alias deep="cd ~/Development/DeepLearning"
 alias imatge='ssh imatge -t tmux attach'
 alias tunel='ssh -f imatge -L 8888:localhost:8888 -N'
+
+# Fast Access Courses Folders
+alias dm-project="cd ~/Documents/UniversidadETH/Courses/Data\ Mining/project"
+alias dm-ex="cd ~/Documents/UniversidadETH/Courses/Data\ Mining/exercises"
+alias ml-project="cd ~/Documents/UniversidadETH/Courses/Machine\ Learning/project"
+alias ml-ex="cd ~/Documents/UniversidadETH/Courses/Machine\ Learning/exercises"
+alias cv-ex="cd ~/Documents/UniversidadETH/Courses/Computer\ Vision/exercises"
+alias pai-ex="cd ~/Documents/UniversidadETH/Courses/Probabilistic\ AI/exercises"
+alias algolab="cd ~/Documents/UniversidadETH/Courses/AlgorithmsLab/code"
+alias create-report="cp -R ~/Development/LaTeX/report-template/{build,ethz_report.cls,report.tex,Makefile} . && rm build/example.pdf"
