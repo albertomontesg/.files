@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Create a ssh tunnel to the given machin and specified ports
+# Arguments:
+# 1 remote host
+# 2 remote port
+# 3 local port (if not given, it will be considered the same as the remote port)
+
+if [ "$3" != "" ]; then
+    ssh -f $1 -L $3:localhost:$2 -N
+else
+    ssh -f $1 -L $2:localhost:$2 -N
+fi

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Print public SSH key. Generate it if necessary
+file="$HOME/.ssh/id_rsa.pub"
+if [ ! -f "$file" ]; then
+  ssh-keygen -t rsa -b 4096 -C "$1"
+fi
+
+cat "$file"
