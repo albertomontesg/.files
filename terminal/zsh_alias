@@ -14,7 +14,7 @@ alias dev="cd ~/Development"
 alias g="git"
 alias h="history"
 alias j="jobs"
-alias reload="source ~/.bash_profile"
+alias reload="source ~/.zshrc"
 
 # ls's
 alias ls='ls -GFh'
@@ -26,9 +26,10 @@ alias las='ls -al'
 #alias sniff
 
 # Software update
-alias update='brew update; brew upgrade --all; brew cleanup'
+alias update='brew update; brew outdated; brew upgrade --all; brew cleanup'
 alias pip-upgrade-all='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
 alias pip3-upgrade-all='pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U'
+alias apm-update='apm upgrade -c false; apm clean'
 
 # Temporal aliases for actual projects
 alias deep="cd ~/Development/DeepLearning"
