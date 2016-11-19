@@ -108,4 +108,13 @@ export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.5/lib:$DYLD_LIBRARY_PATH
 export HOMEBREW_EDITOR=nano
 export PATH="/usr/local/sbin:$PATH"
 
-export ZSH_AUTOSUGGEST_STRATEGY='match_prev_cmd'
+###### Personalize ZSH plugins ######
+# Autosuggest
+ZSH_AUTOSUGGEST_STRATEGY='match_prev_cmd'
+# Syntax Highlighting
+export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+
+# Z command (https://github.com/rupa/z)
+. `brew --prefix`/etc/profile.d/z.sh
