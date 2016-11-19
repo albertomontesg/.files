@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git battery boot2docker brew celery compose copydir copyfile cp django emoji github osx pylint python tmux virtualenv gpg-agent)
+plugins=(git battery boot2docker brew celery compose copydir copyfile cp django emoji github osx pylint python tmux virtualenv gpg-agent zsh-syntax-highlighting)
 
 # User configuration
 

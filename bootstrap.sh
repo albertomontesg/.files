@@ -5,6 +5,7 @@ CURRENT_DIR=$(pwd)
 # ln -s $CURRENT_DIR/terminal/zsh_alias ~/.zsh_alias
 # ln -s $CURRENT_DIR/terminal/zshrc ~/.zshrc
 # ln -s $CURRENT_DIR/terminal/theme/gitster.zsh-theme ~/.oh-my-zsh/custom/themes/
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 #
 # # TMUX
 # mkdir -p ~/.tmux/plugins
