@@ -1,0 +1,5 @@
+
+# Make dir and open at the same time
+mkcd() {
+  mkdir -p "$1" && cd "$1"
+}

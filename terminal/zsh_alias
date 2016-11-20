@@ -22,9 +22,6 @@ alias la='ls -a'
 alias ll='ls -l'
 alias las='ls -al'
 
-# View HTTP traffic
-#alias sniff
-
 # Software update
 alias update='brew update; brew outdated; brew upgrade --all; brew cleanup'
 alias pip-upgrade-all='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
@@ -45,3 +42,6 @@ alias cv-ex="cd ~/Documents/UniversidadETH/Courses/Computer\ Vision/exercises"
 alias pai-ex="cd ~/Documents/UniversidadETH/Courses/Probabilistic\ AI/exercises"
 alias algolab="cd ~/Documents/UniversidadETH/Courses/AlgorithmsLab/code"
 alias create-report="cp -R ~/Development/LaTeX/report-template/{build,ethz_report.cls,report.tex,Makefile} . && rm build/example.pdf"
+
+# Applications
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
