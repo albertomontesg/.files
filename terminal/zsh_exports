@@ -1,0 +1,17 @@
+# You may need to manually set your language environment
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Homebrew
+export PATH="$PATH:/usr/local/sbin"
+export HOMEBREW_EDITOR='atom'
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nano'
+else
+  export EDITOR='atom'
+fi
+
+# SSH
+export SSH_KEY_PATH="~/.ssh/rsa_id"

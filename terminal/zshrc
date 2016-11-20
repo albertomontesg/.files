@@ -49,65 +49,21 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git battery boot2docker brew celery compose copydir copyfile cp django emoji github osx pylint python tmux virtualenv gpg-agent zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git battery brew copydir copyfile cp emoji osx pylint python tmux virtualenv gpg-agent zsh-autosuggestions zsh-syntax-highlighting)
 
-# User configuration
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/usr/local/MacGPG2/bin:/Library/TeX/texbin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nano'
-else
-  export EDITOR='atom'
-fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias zshconfig="nano ~/.zshrc"
-alias ohmyzsh="nano ~/.oh-my-zsh"
-
 source ~/.zsh_alias
 source ~/.zsh_functions
+source ~/.zsh_exports
+[ -f ~/.zsh_local ] && source ~/.zsh_local
 
-setopt RM_STAR_WAIT
 
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+# Autoenv
+source /usr/local/opt/autoenv/activate.sh
+# Z command (https://github.com/rupa/z)
+. `brew --prefix`/etc/profile.d/z.sh
 
-# GPG keys
-GPG_TTY=$(tty)
-export GPG_TTY
-
-# GPG Agent
-if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
-    source ~/.gnupg/.gpg-agent-info
-    export GPG_AGENT_INFO
-else
-    eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
-fi
-
-export PATH=/Developer/NVIDIA/CUDA-7.5/bin:$PATH
-export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.5/lib:$DYLD_LIBRARY_PATH
-
-export HOMEBREW_EDITOR=nano
-export PATH="/usr/local/sbin:$PATH"
 
 ###### Personalize ZSH plugins ######
 # Autosuggest
@@ -120,6 +76,3 @@ ZSH_HIGHLIGHT_STYLES[command]='fg=white,bold'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=white,bold'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=white,bold'
 ZSH_HIGHLIGHT_STYLES[function]='fg=white,bold'
-
-# Z command (https://github.com/rupa/z)
-. `brew --prefix`/etc/profile.d/z.sh
