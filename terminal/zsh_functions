@@ -1,5 +1,6 @@
+#!/usr/bin/env bash
 
-# Make dir and open at the same time
-mkcd() {
-  mkdir -p "$1" && cd "$1"
+# Create a new directory and enter it
+function mkd() {
+	mkdir -p "$@" && cd "$_";
 }
