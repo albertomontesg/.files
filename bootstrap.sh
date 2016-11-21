@@ -46,7 +46,7 @@ install_clone_repo() {
 }
 
 ask_for_confirmation() {
-    echo "$1 (y/n) "
+    printf "$1 (y/n): "
     read -n 1
     printf "\n"
 }
@@ -65,15 +65,18 @@ if [ $(basename $ZSH) != ".oh-my-zsh" ]; then
     echo "Installed"
 fi
 # Move all terminal files
+echo "\nInstalling shell dotfiles"
 terminal_files=(tmux.conf zshrc zsh_alias zsh_exports zsh_functions)
 for file in ${terminal_files[@]} ; do
     link_file terminal/$file ~/.$file
 done
 # Install terminal themes
+echo "\nInstalling terminal themes"
 for themefile in terminal/themes/*.zsh-theme ; do
     link_file $themefile ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/$(basename "$themefile")
 done
 # Install Zsh Syntax highlighting and autocomplete
+echo "\nInstalling zsh and tmux plugins"
 ZSH_SYNTAX_HIGHLIGHTING_DIR=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ZSH_SYNTAX_HIGHLIGHTING_REPO="https://github.com/zsh-users/zsh-syntax-highlighting.git"
 ZSH_AUTOSUGGESTIONS_DIR=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -86,6 +89,7 @@ install_clone_repo https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm ~/.tm
 
 
 # Atom files
+echo "\nInstalling Atom files and packages"
 for file in atom/* ; do
     link_file $file ~/.atom/$(basename $file)
 done
@@ -96,16 +100,19 @@ fi
 rm ~/.atom/packages.list
 
 # Git
+echo "\nLinking Git files"
 link_file git/gitconfig ~/.gitconfig
 link_file git/gitignore ~/.gitignore
 
 # Binaries
+echo "\nInstalling custom binaries"
 binaries=(ssh-key tunnel serve eachdir git-jump)
 for bin in ${binaries[@]} ; do
     link_file bin/$bin /usr/local/bin/$bin
 done
 
 # Brew and Cask
+echo "\nInstalling packages and apps"
 ask_for_confirmation "Do you want to install Brew packages?"
 if answer_is_yes; then
     sh install/brew.sh
