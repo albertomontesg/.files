@@ -100,7 +100,7 @@ link_file git/gitconfig ~/.gitconfig
 link_file git/gitignore ~/.gitignore
 
 # Binaries
-binaries=(ssh-key tunnel)
+binaries=(ssh-key tunnel serve eachdir git-jump)
 for bin in ${binaries[@]} ; do
     link_file bin/$bin /usr/local/bin/$bin
 done
