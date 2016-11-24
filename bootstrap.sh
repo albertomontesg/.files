@@ -121,3 +121,6 @@ ask_for_confirmation "Do you want to install Cask apps?"
 if answer_is_yes; then
     sh install/cask.sh
 fi
+
+# System setup
+system/setup.sh
