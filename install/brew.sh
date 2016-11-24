@@ -53,28 +53,29 @@ brew upgrade
 
 apps=(
     # Languages
-    ruby
+    go
     lua
     node
-    go
     python
     python3
     r
+    ruby
     # C Compiler, debugger and libraries
+    boost
+    cgal
     gcc
     gcc49
     gdb
-    cgal
-    boost
     # Zsh & terminal
+    tmux
+    z
     zsh
     zsh-completions
-    z
-    tmux
     # Shell utilities
-    htop-osx
-    grep
+    curl --with-openssl
     gnupg2
+    grep
+    htop-osx
     nano
     openssh
     pstree
@@ -84,17 +85,17 @@ apps=(
     watch
     wget
     # Git and extra
+    gist
     git
     git-extras
     git-lfs
-    gist
     # Databases
     mongodb
-    postgresql
     mysql
+    postgresql
     # Server
-    nginx
     hadoop
+    nginx
     # TeX
     chktex
     latex-mk
@@ -105,18 +106,21 @@ apps=(
     protobuf
     # Extra
     autoenv
+    bazel
+    docker
     keybase
+    ntfs-3g
     pinentry-mac
     speedtest_cli
     sshfs
-    ntfs-3g
     wireshark
     youtube-dl
-    docker
-    bazel
 )
 
 brew install "${apps[@]}"
+
+# Link required packages
+brew link --force curl
 
 # Remove outdated versions from the cellar
 brew cleanup
