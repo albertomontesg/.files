@@ -8,6 +8,7 @@ brew tap caskroom/versions
 # Install packages
 apps=(
     atom
+    dash
     dropbox
     evernote
     google-chrome
