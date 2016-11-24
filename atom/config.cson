@@ -4,6 +4,11 @@
       _analyticsUserId: "ffcfa7e1-29f3-4dc4-a541-2adc5811304c"
   "atom-gpg":
     gpgHomeDir: "~/.gnupg/"
+  "autocomplete-plus":
+    fileBlacklist: [
+      "*.md"
+      "*.txt"
+    ]
   autosave:
     enabled: true
   core:
