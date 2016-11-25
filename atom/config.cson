@@ -36,7 +36,7 @@
     projectHome: "/Users/Alberto/Development/github"
     telemetryConsent: "limited"
     themes: [
-      "one-dark-ui"
+      "nord-atom-ui"
       "base16-tomorrow-dark-theme"
     ]
   editor:
@@ -75,6 +75,8 @@
   minimap:
     adjustAbsoluteModeHeight: true
     scrollAnimation: true
+  "nord-atom-ui":
+    darkerFormFocusEffect: true
   nuclide:
     lastConnectionDetails:
       lastOfficialRemoteServerCommand: "nuclide-start-server"
