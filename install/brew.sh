@@ -108,11 +108,13 @@ apps=(
     autoenv
     bazel
     docker
+    extract_url
     keybase
     ntfs-3g
     pinentry-mac
     speedtest_cli
     sshfs
+    urlview
     wireshark
     youtube-dl
 )
