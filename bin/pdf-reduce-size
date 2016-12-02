@@ -2,6 +2,8 @@
 
 # Takes a pdf and reduce its size reducing the quality of the images. Useful for reports writen in
 # LaTeX with images in high resolution that end up with a huge size.
+# The idea come from the following source:
+# http://tex.stackexchange.com/questions/14429/pdftex-reduce-pdf-size-reduce-image-quality
 
 if [ "$1" == "-h" ]; then
     echo "Usage of the pdf-reduce-size script"
