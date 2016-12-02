@@ -41,7 +41,7 @@
     ]
   editor:
     backUpBeforeSaving: true
-    fontSize: 11
+    fontSize: 10
     invisibles: {}
     preferredLineLength: 100
     softWrap: true

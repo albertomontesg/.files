@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Takes a pdf and reduce its size reducing the quality of the images. Useful for reports writen in
+# LaTeX with images in high resolution that end up with a huge size.
+
+if [ "$1" == "-h" ]; then
+    echo "Usage of the pdf-reduce-size script"
+    echo "pdf-reduce-size -q QUALITY -o OUTPUT_FILE input_file.pdf"
+    echo ""
+    echo "Differents values for QUALITY:"
+    echo "* screen     screen-view-only quality, 72 dpi images"
+    echo "* ebook      low quality, 150 dpi images"
+    echo "* printer    high quality, 300 dpi images"
+    echo "* prepress   high quality, color preserving, 300 dpi images"
+    echo "* default    almost identical to 'screen'"
+    exit
+fi
+
+#INPUT_FILE="${@: -1}"
+
+while [[ $# -gt 1 ]]
+do
+    key="$1"
+
+    case $key in
+        -o|--output)
+        OUTPUT_FILE="$2"
+        shift
+        ;;
+        -q|--quality)
+        QUALITY="$2"
+        shift
+        ;;
+        *)
+        ;;
+    esac
+    shift
+done
+
+INPUT_FILE="$1"
+
+: ${QUALITY:="printer"}
+if [ "$OUTPUT_FILE" == "" ]; then
+    echo "No output file given. Use -o or --output argument"
+    exit
+fi
+if [ "$INPUT_FILE" == "" ]; then
+    echo "No input file given."
+    exit
+fi
+
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/"$QUALITY" -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$OUTPUT_FILE" "$INPUT_FILE"

@@ -87,6 +87,12 @@ install_clone_repo $ZSH_AUTOSUGGESTIONS_REPO $ZSH_AUTOSUGGESTIONS_DIR "Zsh Autos
 [ ! -d ~/.tmux/plugins ] && mkdir -p ~/.tmux/plugins
 install_clone_repo https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm ~/.tmux/plugins
 
+# Install kwm files
+[ ! -d ~/.kwm ] && mkdir ~/.kwm
+kwm_files=(kwmrc rules)
+for file in ${kwm_files[@]} ; do
+    link_file terminal/$file ~/.kwm/$file
+done
 
 # Atom files
 echo "\nInstalling Atom files and packages"
@@ -106,7 +112,7 @@ link_file git/gitignore ~/.gitignore
 
 # Binaries
 echo "\nInstalling custom binaries"
-binaries=(ssh-key tunnel serve eachdir git-jump)
+binaries=(ssh-key tunnel serve eachdir git-jump pdf-reduce-size)
 for bin in ${binaries[@]} ; do
     link_file bin/$bin /usr/local/bin/$bin
 done
