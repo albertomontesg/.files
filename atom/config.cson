@@ -41,6 +41,7 @@
     ]
   editor:
     backUpBeforeSaving: true
+    fontFamily: "Roboto Mono"
     fontSize: 10
     invisibles: {}
     preferredLineLength: 100
