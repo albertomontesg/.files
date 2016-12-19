@@ -18,12 +18,14 @@ apps=(
     gpgtools
     iterm2
     mactex
+    messenger
     osxfuse
     skype
     slack
     slic3r
     spotify
     vlc
+    whatsapp
     wireshark-chmodbpf
     # Fonts
     font-roboto
