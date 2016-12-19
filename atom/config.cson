@@ -36,7 +36,7 @@
     projectHome: "/Users/Alberto/Development/github"
     telemetryConsent: "limited"
     themes: [
-      "nord-atom-ui"
+      "one-dark-ui"
       "base16-tomorrow-dark-theme"
     ]
     useCustomTitleBar: true
@@ -95,7 +95,8 @@
         username: "amontes"
     "nuclide-home":
       showHome: false
-  "one-dark-ui": {}
+  "one-dark-ui":
+    tabSizing: "Minimum"
   "one-light-ui": {}
   "project-manager":
     environmentSpecificProjects: true
