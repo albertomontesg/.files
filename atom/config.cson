@@ -39,6 +39,7 @@
       "nord-atom-ui"
       "base16-tomorrow-dark-theme"
     ]
+    useCustomTitleBar: true
   editor:
     backUpBeforeSaving: true
     fontFamily: "Roboto Mono"

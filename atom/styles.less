@@ -30,3 +30,54 @@ atom-text-editor {
 atom-text-editor::shadow .cursor {
   // border-color: red;
 }
+
+//************************************************************
+// CSS to achive an Atom window without title bar (borderless)
+// Source: https://github.com/atom/atom/pull/10208#issuecomment-241346442
+// Hide title
+.title-bar .title {
+  display: none;
+}
+
+// Remove background from titlebar and toolbars
+.title-bar,
+.tool-bar,
+.tool-bar button.tool-bar-btn {
+  background-color: transparent;
+  border-width: 0;
+}
+
+// Shift the tabs up
+atom-workspace atom-workspace-axis.horizontal {
+  margin-top: -20px;
+}
+
+// Keep the side panels aligned
+atom-panel-container{
+  &.left {
+    margin-top: 42px;
+  }
+  &.right {
+    margin-top: 10px;
+  }
+}
+
+.fullscreen {
+  atom-workspace atom-workspace-axis.horizontal {
+    margin-top: 0px;
+  }
+  atom-panel-container{
+    &.left {
+      margin-top: 0px;
+    }
+    &.right {
+      margin-top: 0px;
+    }
+  }
+}
+
+// Avoid tabs from overlap window controls when sidebar is closed
+atom-workspace atom-panel-container.left:empty + atom-workspace-axis.vertical .tab-bar {
+  margin-left: 70px;
+}
+//************************************************************
