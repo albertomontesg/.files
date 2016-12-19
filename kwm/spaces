@@ -1,0 +1,7 @@
+kwmc config space 0 1 mode bsp
+kwmc config space 0 1 name main
+
+kwmc config space 0 2 mode bsp
+kwmc config space 0 2 name documents
+
+kwmc config space 1 0 name web

@@ -89,9 +89,9 @@ install_clone_repo https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm ~/.tm
 
 # Install kwm files
 [ ! -d ~/.kwm ] && mkdir ~/.kwm
-kwm_files=(kwmrc rules)
+kwm_files=(kwmrc rules spaces)
 for file in ${kwm_files[@]} ; do
-    link_file terminal/$file ~/.kwm/$file
+    link_file kwm/$file ~/.kwm/$file
 done
 
 # Atom files
