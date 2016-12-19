@@ -7,6 +7,7 @@ brew tap caskroom/fonts
 
 # Install packages
 apps=(
+    alfred
     atom
     dash
     docker
