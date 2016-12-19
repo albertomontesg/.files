@@ -2,6 +2,8 @@
   "atom-beautify":
     general:
       _analyticsUserId: "ffcfa7e1-29f3-4dc4-a541-2adc5811304c"
+  "atom-clock":
+    showClockIcon: true
   "atom-gpg":
     gpgHomeDir: "~/.gnupg/"
   "autocomplete-plus":
@@ -46,6 +48,7 @@
     fontSize: 10
     invisibles: {}
     preferredLineLength: 100
+    scrollSensitivity: 60
     softWrap: true
     softWrapAtPreferredLineLength: true
     tabLength: 4
