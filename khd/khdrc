@@ -9,8 +9,10 @@ cmd + ctrl - down           :   /usr/local/bin/kwmc window -f south
 # Swap between spaces
 cmd + alt - right           :   /usr/local/bin/kwmc window -m space right
 cmd + alt - left            :   /usr/local/bin/kwmc window -m space left
-cmd + alt - up              :   /usr/local/bin/kwmc window -m display 1
-cmd + alt - down            :   /usr/local/bin/kwmc window -m display 0
+cmd + alt - up              :   /usr/local/bin/kwmc window -m display 1 \
+                                /usr/local/bin/kwmc display -f 1
+cmd + alt - down            :   /usr/local/bin/kwmc window -m display 0 \
+                                /usr/local/bin/kwmc display -f 0
 
 # Change focus between displays
 cmd - up                    :   /usr/local/bin/kwmc display -f 1
