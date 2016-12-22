@@ -93,6 +93,7 @@ kwm_files=(kwmrc rules spaces)
 for file in ${kwm_files[@]} ; do
     link_file kwm/$file ~/.kwm/$file
 done
+link_file khd/khdrc ~/.khdrc
 
 # Atom files
 echo "\nInstalling Atom files and packages"
