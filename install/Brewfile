@@ -1,0 +1,130 @@
+### TAPS Listing ###
+# Homebrew
+tap 'homebrew/boneyard'
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'homebrew/dupes'
+tap 'homebrew/fuse'
+tap 'homebrew/games'
+tap 'homebrew/php'
+tap 'homebrew/python'
+tap 'homebrew/science'
+tap 'homebrew/services'
+tap 'homebrew/tex'
+tap 'homebrew/versions'
+# Cask
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+# Others
+tap 'koekeishiya/khd'
+tap 'koekeishiya/kwm'
+tap 'neovim/neovim'
+
+### INSTALL PACKAGES ###
+# Languages
+brew 'go'
+brew 'lua'
+brew 'node'
+brew 'python'
+brew 'python3'
+brew 'r'
+brew 'ruby'
+# C Compiler, debugger and libraries
+brew 'boost'
+brew 'cgal'
+brew 'cmake'
+brew 'gcc'
+brew 'gcc49'
+brew 'gdb'
+brew 'make'
+# Zsh & terminal
+brew 'tmux'
+brew 'z'
+brew 'zsh'
+brew 'zsh-completions'
+# Shell utilities
+brew 'curl', args: ['with-openssl']
+brew 'gnupg2'
+brew 'gpg-agent'
+brew 'grep'
+brew 'htop-osx'
+brew 'nano'
+brew 'openssh'
+brew 'pstree'
+brew 'tree'
+brew 'unrar'
+brew 'vim'
+brew 'watch'
+brew 'wget'
+# Git and extra
+brew 'gist'
+brew 'git'
+brew 'git-extras'
+brew 'git-lfs'
+# Databases
+brew 'mongodb'
+brew 'mysql'
+brew 'postgresql'
+# Server
+brew 'hadoop'
+brew 'nginx'
+# TeX
+brew 'chktex'
+brew 'latex-mk'
+# Science
+brew 'ffmpeg', args: ['with-openjpeg', 'with-openssl']
+brew 'hdf5'
+brew 'imagemagick', args: ['with-webp']
+brew 'open-mpi'
+brew 'opencv3', args: ['with-contrib', 'with-ffmpeg', 'with-python3', 'without-test']
+brew 'protobuf'
+# Extra
+brew 'autoenv'
+brew 'bazel'
+brew 'docker'
+brew 'extract_url'
+brew 'keybase'
+brew 'ntfs-3g'
+brew 'pinentry-mac'
+brew 'speedtest_cli'
+brew 'sshfs'
+brew 'urlview'
+brew 'wireshark'
+brew 'youtube-dl'
+
+### INSTALL APPLICATIONS ###
+# Applications
+cask 'alfred'
+cask 'atom'
+cask 'dash'
+cask 'docker'
+cask 'dropbox'
+cask 'evernote'
+cask 'google-chrome'
+cask 'google-drive'
+cask 'gpgtools'
+cask 'iterm2'
+cask 'mactex'
+cask 'messenger'
+cask 'osxfuse'
+cask 'skype'
+cask 'slack'
+cask 'slic3r'
+cask 'vlc'
+cask 'whatsapp'
+cask 'wireshark-chmodbpf'
+cask 'xquartz'
+# Fonts
+cask 'font-roboto'
+cask 'font-roboto-mono'
+# Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
+cask 'qlcolorcode'
+cask 'qlstephen'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+cask 'qlprettypatch'
+cask 'quicklook-csv'
+cask 'betterzipql'
+cask 'qlimagesize'
+cask 'webpquicklook'
+cask 'suspicious-package'

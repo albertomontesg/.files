@@ -120,13 +120,15 @@ done
 
 # Brew and Cask
 echo "\nInstalling packages and apps"
+# Check for Homebrew and install it if missing
+if test ! $(which brew)
+then
+  echo "Installing Homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 ask_for_confirmation "Do you want to install Brew packages?"
 if answer_is_yes; then
-    sh install/brew.sh
-fi
-ask_for_confirmation "Do you want to install Cask apps?"
-if answer_is_yes; then
-    sh install/cask.sh
+    brew bundle --file=install/Brewfile
 fi
 
 # System setup
