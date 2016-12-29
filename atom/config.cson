@@ -60,7 +60,9 @@
     args: "< testsets/sample.in"
   "git-diff":
     showIconsInEditorGutter: true
-  "git-plus": {}
+  "git-plus":
+    general:
+      analytics: false
   "gpp-compiler": {}
   jsformat:
     format_on_save: false

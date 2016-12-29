@@ -16,6 +16,7 @@ alias h="history"
 alias j="jobs"
 alias reload="source ~/.zshrc"
 alias services="brew services"
+alias preview="open -a Preview"
 
 # Software update
 alias brew-update='brew update; brew outdated; brew upgrade --all; brew cleanup'

@@ -1,5 +1,18 @@
 khd kwm on
 
+# Reload kwmc and khd configs
+cmd + ctrl - r              :   /usr/local/bin/khd -e "reload"
+cmd + ctrl + alt - r        :   /usr/local/bin/kwmc config relaod
+
+# Set Space Tiling Mode To BSP
+cmd + alt + ctrl - b        :   /usr/local/bin/kwmc space -t bsp
+
+# Set Space Tiling Mode To Monocle
+cmd + alt + ctrl - m        :   /usr/local/bin/kwmc space -t monocle
+
+# Set Space Tiling Mode To Floating
+cmd + alt + ctrl - f        :   /usr/local/bin/kwmc space -t float
+
 # Move between focused windows
 cmd + ctrl - right          :   /usr/local/bin/kwmc window -f east
 cmd + ctrl - left           :   /usr/local/bin/kwmc window -f west
