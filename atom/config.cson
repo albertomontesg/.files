@@ -1,11 +1,9 @@
 "*":
   "atom-beautify":
     general:
-      _analyticsUserId: "ffcfa7e1-29f3-4dc4-a541-2adc5811304c"
+      analytics: false
   "atom-clock":
     showClockIcon: true
-  "atom-gpg":
-    gpgHomeDir: "~/.gnupg/"
   "autocomplete-plus":
     fileBlacklist: [
       "*.md"
@@ -30,10 +28,7 @@
       "language-js-specs"
       "vim-mode"
       "latex"
-      "linter-markdown"
       "latexer"
-      "linter-pylint"
-      "gpp-compiler"
     ]
     projectHome: "/Users/Alberto/Development/github"
     telemetryConsent: "limited"
@@ -56,21 +51,17 @@
     userId: "7d5bf2a8-56ac-88aa-4ce4-8791fb752f91"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
-  "gcc-make-run":
-    args: "< testsets/sample.in"
   "git-diff":
     showIconsInEditorGutter: true
   "git-plus":
     general:
       analytics: false
-  "gpp-compiler": {}
   jsformat:
     format_on_save: false
     indent_with_tabs: true
     keep_array_indentation: true
     keep_function_indentation: true
     space_before_conditional: false
-  "jupyter-notebook": {}
   linter:
     errorPanelHeight: 188
     ignoredMessageTypes: [
@@ -83,32 +74,10 @@
   minimap:
     adjustAbsoluteModeHeight: true
     scrollAnimation: true
-  "nord-atom-ui":
-    darkerFormFocusEffect: true
-  nuclide:
-    lastConnectionDetails:
-      lastOfficialRemoteServerCommand: "nuclide-start-server"
-      updatedConfig:
-        authMethod: "PRIVATE_KEY"
-        cwd: "/imatge/amontes/work/C3D"
-        displayTitle: "(default)"
-        host: "imatge.upc.edu"
-        password: ""
-        pathToPrivateKey: "/Users/Alberto/.ssh/imatge_rsa"
-        remoteServerCommand: "~/work/node_modules/.bin/nuclide-start-server"
-        sshPort: "2231"
-        username: "amontes"
-    "nuclide-home":
-      showHome: false
   "one-dark-ui":
     tabSizing: "Minimum"
-  "one-light-ui": {}
-  "project-manager":
-    environmentSpecificProjects: true
   "python-isort":
     sortOnSave: true
-  "screen-send":
-    terminalType: "MacOS X Terminal"
   "spell-check":
     grammars: [
       "source.asciidoc"
@@ -121,17 +90,11 @@
     locales: [
       "en-US"
     ]
-  "terminal-plus":
-    style:
-      theme: "homebrew"
-    toggles:
-      autoClose: true
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: false
   "tree-view-git-branch":
     separator: true
-  "vim-mode": {}
   welcome:
     showOnStartup: false
 ".hyperlink.text":
