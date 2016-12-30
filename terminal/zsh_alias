@@ -17,6 +17,7 @@ alias j="jobs"
 alias reload="source ~/.zshrc"
 alias services="brew services"
 alias preview="open -a Preview"
+alias htop="sudo htop"
 
 # Software update
 alias brew-update='brew update; brew outdated; brew upgrade --all; brew cleanup'
