@@ -10,6 +10,6 @@ style: """
   color: #fdf6e3
   font: 12px Roboto Mono
   font-weight: bold
-  right: 10px
-  top: 3px
+  right: 15px
+  top: 5px
 """

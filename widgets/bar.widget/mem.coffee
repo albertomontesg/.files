@@ -10,7 +10,7 @@ style: """
   color: #fdf6e3
   font: 12px Roboto Mono
   right: 220px
-  top: 3px
+  top: 5px
   span
     color: #05d0f8
 """

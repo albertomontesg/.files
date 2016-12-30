@@ -1,13 +1,15 @@
+
 refreshFrequency: false
 
 render: (output) ->
   ""
 
 style: """
-  top: 0
-  left: 0
+  top: 2px;
+  right: 10px;
+  left 10px;
+  border-radius: 4px;
   height: 20px
-  width: 100%
   background-color: #1d1d1d
   z-index: -1
 """

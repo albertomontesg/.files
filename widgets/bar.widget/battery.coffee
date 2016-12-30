@@ -8,7 +8,7 @@ render: (output) ->
 style: """
   -webkit-font-smoothing: antialiased
   font: 12px Roboto Mono
-  top: 2px
+  top: 4px
   right: 145px
   color: #f7ed01
   span

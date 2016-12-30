@@ -11,5 +11,5 @@ style: """
   font: 12px Roboto Mono
   font-weight: bold
   right: 60px
-  top: 3px
+  top: 5px
 """
