@@ -1,4 +1,4 @@
-command: "~/.files/widgets/bar.widget/scripts/kwm_screens"
+command: "~/.files/widgets/bar.widget/scripts/screens"
 
 refreshFrequency: 100 # ms
 
@@ -11,7 +11,7 @@ style: """
   color: #05d0f8
   font: 12px Roboto Mono
   left: 15px
-  top: 3px
+  top: 4px
   width:850px
   height: 16px
   white-space: nowrap

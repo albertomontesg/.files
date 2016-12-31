@@ -29,6 +29,7 @@
       "vim-mode"
       "latex"
       "latexer"
+      "linter-pylint"
     ]
     projectHome: "/Users/Alberto/Development/github"
     telemetryConsent: "limited"
