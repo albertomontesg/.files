@@ -12,7 +12,7 @@ This are my personal dotfiles which are used with the following setup:
 ## TODO
 
 Todo list for my personal dotfiles:
-    * [ ] Personalize even more `tmux` interface
+    * [x] Personalize even more `tmux` interface
     * [x] Explore and include `kwm`
     * [x] Include [nerdbar](https://github.com/koekeishiya/nerdbar.widget) and personalization [plugins](http://tracesof.net/uebersicht/)
         * [ ] Separate the current status widget into different modules

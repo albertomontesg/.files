@@ -64,17 +64,26 @@ if [ $(basename $ZSH) != ".oh-my-zsh" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     echo "Installed"
 fi
+
 # Move all terminal files
 echo "\nInstalling shell dotfiles"
 terminal_files=(tmux.conf zshrc zsh_alias zsh_exports zsh_functions)
 for file in ${terminal_files[@]} ; do
     link_file terminal/$file ~/.$file
 done
+
 # Install terminal themes
 echo "\nInstalling terminal themes"
 for themefile in terminal/themes/*.zsh-theme ; do
     link_file $themefile ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/$(basename "$themefile")
 done
+
+# Install tmux theme
+echo "\nInstalling tmux themes"
+for themefile in terminal/themes/*.tmuxtheme ; do
+    link_file $themefile ~/.tmux/themes/$(basename "$themefile")
+done
+
 # Install Zsh Syntax highlighting and autocomplete
 echo "\nInstalling zsh and tmux plugins"
 ZSH_SYNTAX_HIGHLIGHTING_DIR=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -83,6 +92,7 @@ ZSH_AUTOSUGGESTIONS_DIR=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosugge
 ZSH_AUTOSUGGESTIONS_REPO="git://github.com/zsh-users/zsh-autosuggestions"
 install_clone_repo $ZSH_SYNTAX_HIGHLIGHTING_REPO $ZSH_SYNTAX_HIGHLIGHTING_DIR "Zsh Syntaz Highlighting"
 install_clone_repo $ZSH_AUTOSUGGESTIONS_REPO $ZSH_AUTOSUGGESTIONS_DIR "Zsh Autosuggestions"
+
 # Install Tmux Plugin Manager
 [ ! -d ~/.tmux/plugins ] && mkdir -p ~/.tmux/plugins
 install_clone_repo https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm ~/.tmux/plugins
