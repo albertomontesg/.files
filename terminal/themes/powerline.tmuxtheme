@@ -1,0 +1,64 @@
+# -- design ----------------------------------------------------------------------------------------
+
+# Status update interval
+set -g status-interval 1
+
+# Status bar on the bottom
+set -g status-position bottom
+
+# Basic status bar colors
+set -g status-fg white
+set -g status-bg colour236
+
+# Left side of status bar
+set -g status-left-bg default
+set -g status-left-fg default
+set -g status-left-length 40
+set -g status-left "#[fg=colour232,bg=#2176c7,bold] #S #[fg=#2176c7,bg=colour240,nobold]#[fg=white,bg=colour240,bold] #(whoami) #[fg=colour240,bg=colour235]#[fg=white,bg=colour235] #I:#P #[fg=colour235,bg=colour236,nobold]"
+
+# Right side of status bar
+set -g status-right-bg default
+set -g status-right-fg default
+set -g status-right-length 80
+set -g status-right "#[fg=colour245,bg=colour236]#[fg=colour232,bg=colour245,bold] #H "
+
+# Current window status
+set -g window-status-current-fg brightwhite
+set -g window-status-current-bg colour238
+set -g window-status-current-attr bold
+set -g window-status-current-format '#[fg=colour236,nobold] #[fg=cyan]#I#[fg=colour250]:#[fg=white]#W#[fg=cyan]#F #[fg=colour238,bg=colour236,nobold]'
+
+# Window status
+set -g window-status-attr none
+set -g window-status-format ' #[fg=blue]#I#[fg=colour230]:#[fg=colour250]#W#[fg=colour244]#F '
+
+# Window separator
+set -g window-status-separator ""
+
+# Window status alignment
+set -g status-justify centre
+
+# Pane border
+set -g pane-border-bg default
+set -g pane-border-fg white
+
+# Active pane border
+set -g pane-active-border-bg default
+set -g pane-active-border-fg blue
+
+# Pane number indicator
+set -g display-panes-colour white
+set -g display-panes-active-colour blue
+
+# Message
+set -g message-bg white
+set -g message-fg black
+set -g message-attr bold
+
+# Command message
+set -g message-command-bg white
+set -g message-command-fg black
+
+# Mode
+set -g mode-bg colour24
+set -g mode-fg colour231
