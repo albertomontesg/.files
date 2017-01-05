@@ -72,7 +72,7 @@ style: """
 
 timeAndDate: (date, time) ->
   # returns a formatted html string with the date and time
-  return "<span class='white'><span class='icon'>&nbsp&nbsp&nbsp </span>#{date}</span>   <span class='icon'></span>#{time}</span>";
+  return "<span class='white'><span class='icon'>&nbsp&nbsp&nbsp&nbsp</span>#{date}</span>&nbsp&nbsp<span class='icon'>&nbsp</span>#{time}</span>";
 
 batteryStatus: (battery, state) ->
   #returns a formatted html string current battery percentage, a representative icon and adds a lighting bolt if the
@@ -110,14 +110,14 @@ getCPU: (cpu) ->
   # I have four cores, so I divide my CPU percentage by four to get the proper number
   cpuNum = cpuNum/4
   cpuNum = cpuNum.toFixed(1)
-  return "<span class='greenbg icon'>&nbsp</span><span class='greenbg'>#{cpuNum}%&nbsp</span><span>&nbsp</span>"
+  return "<span class='greenbg icon'>&nbsp&nbsp</span><span class='greenbg'>#{cpuNum}%&nbsp</span><span>&nbsp</span>"
 
 getMem: (mem) ->
   memNum = parseFloat(mem)
   # correct for wierd reporting
   memNum = memNum * 5 / 8
   memNum = memNum.toFixed(1)
-  return "<span class='yellowbg icon'>&nbsp</span><span class='yellowbg'>#{memNum}%&nbsp</span><span>&nbsp</span>"
+  return "<span class='yellowbg icon'>&nbsp&nbsp</span><span class='yellowbg'>#{memNum}%&nbsp</span><span>&nbsp</span>"
 
 convertBytes: (bytes) ->
   kb = bytes / 1024
@@ -127,13 +127,11 @@ usageFormat: (kb) ->
   # if kb > 1024
     mb = kb / 1024
     "#{parseFloat(mb.toFixed(2))}MB"
-  # else
-    # "#{parseFloat(kb.toFixed(3))} KB/s"
 
 getNetTraffic: (down, up) ->
   downString = @convertBytes(parseInt(down))
   upString = @convertBytes(parseInt(up))
-  return "<span>&nbsp</span><span class='icon cyanbg'></span><span class='cyanbg'>#{downString}</span><span>&nbsp</span><span class='icon orangebg'></span><span class='orangebg'>#{upString}</span> "
+  return "<span>&nbsp</span><span class='icon cyanbg'>&nbsp&nbsp</span><span class='cyanbg'>#{downString}&nbsp</span><span>&nbsp</span><span class='icon orangebg'>&nbsp&nbsp</span><span class='orangebg'>#{upString}&nbsp</span> "
 
 
 
@@ -158,5 +156,5 @@ update: (output, domEl) ->
 
 
   # create an HTML string to be displayed by the widget
-  htmlString = @getWifiStatus(netStatus) + @batteryStatus(battery, isCharging) + "<span class='icon'>&nbsp</span>" + @getNetTraffic(down, up) + @getMem(mem) + @getCPU(cpu) + "<span class='icon'>&nbsp&nbsp</span>" + @timeAndDate(date, time)
+  htmlString = @getWifiStatus(netStatus) + @batteryStatus(battery, isCharging) + "<span class='icon'>&nbsp&nbsp</span>" + @getNetTraffic(down, up) + @getMem(mem) + @getCPU(cpu) + "<span class='icon'>&nbsp</span>" + @timeAndDate(date, time)
   $(domEl).find('.compstatus').html(htmlString)
