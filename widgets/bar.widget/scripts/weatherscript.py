@@ -39,7 +39,7 @@ def main():
     # print(city + ", " + region)
 
     baseurl = "https://query.yahooapis.com/v1/public/yql?"
-    yql_query = 'SELECT * FROM weather.forecast where woeid in (SELECT woeid FROM geo.places(1) WHERE text=\"'+ city + ', ' + region + '\") and u=\'c\''
+    yql_query = 'SELECT * FROM weather.forecast where woeid in (SELECT woeid FROM geo.places(1) WHERE text=\"{},{}\") and u=\'c\''.format(city, region)
     yql_url = baseurl + urllib.parse.urlencode({'q':yql_query}) + "&format=json"
     try:
         data = []
@@ -88,4 +88,7 @@ def main():
   else:
     print("--@99")
 
-main()
+try:
+    main()
+except:
+    print("--@99")
