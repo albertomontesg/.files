@@ -9,7 +9,7 @@ style: """
   -webkit-font-smoothing: antialiased
   font: 12px Roboto Mono
   text-transform: lowercase
-  right: 60px
+  right: 20px
   top: 2px
   color: #05d0f8
   height: 13
