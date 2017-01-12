@@ -1,3 +1,2 @@
 #!/bin/bash
-dropdown=false
-/usr/local/bin/kwmc query space active mode
+echo "$(/usr/local/bin/kwmc query space active mode) | font=RobotoMono-Regular"

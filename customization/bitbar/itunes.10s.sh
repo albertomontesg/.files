@@ -53,10 +53,10 @@ fi
 
 BitBarDarkMode=${BitBarDarkMode}
 if [ "$BitBarDarkMode" ]; then
-  COLOR0="#666666"
+  COLOR0="#ffffff"
   COLOR1="#ffffff"
-  COLOR2="#666666"
-  COLOR3="#333333"
+  COLOR2="#ffffff"
+  COLOR3="#ffffff"
 else
   COLOR0="#333333"
   COLOR1="#000000"
