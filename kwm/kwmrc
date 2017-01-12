@@ -61,7 +61,7 @@ kwmc config focus-follows-mouse on
 kwmc config standby-on-float on
 
 # Center window when made floating
-kwmc config center-on-float on
+kwmc config center-on-float off
 
 /*
     The mouse will automatically move to the center
@@ -87,20 +87,14 @@ kwmc config cycle-focus on
 # Set default container split-ratio
 kwmc config split-ratio 0.5
 
-# New splits become the left leaf-node
+# New splits become the right leaf-node
 kwmc config spawn right
 
 # Enable border for focused window
 kwmc config border focused off
-# kwmc config border focused size 1
-# kwmc config border focused color 0x33D5C4A1
-# kwmc config border focused radius 1
 
 # Enable border for marked window
 kwmc config border marked off
-# kwmc config border marked size 1
-# kwmc config border marked color 0x117f7f7f
-# kwmc config border marked radius 1
 
 include rules
 include spaces
