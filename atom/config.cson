@@ -26,7 +26,6 @@
     disabledPackages: [
       "language-js-specs"
       "language-js-specs"
-      "vim-mode"
       "latex"
       "latexer"
       "linter-pylint"
@@ -71,6 +70,8 @@
   "linter-docker": {}
   "linter-matlab": {}
   "linter-pylint": {}
+  "make-runner":
+    hidePane: true
   "markdown-themeable-pdf": {}
   minimap:
     adjustAbsoluteModeHeight: true

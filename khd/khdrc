@@ -30,3 +30,6 @@ cmd + alt - down            :   /usr/local/bin/kwmc window -m display 0 \
 # Change focus between displays
 cmd - up                    :   /usr/local/bin/kwmc display -f 1
 cmd - down                  :   /usr/local/bin/kwmc display -f 0
+
+# Resize focused window to its container
+cmd + alt + ctrl - l        :   /usr/local/bin/kwmc window -r focused
