@@ -23,3 +23,9 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
+
+'body':
+  'ctrl-right': 'window:focus-pane-on-right'
+  'ctrl-left': 'window:focus-pane-on-left'
+  'ctrl-up': 'window:focus-pane-above'
+  'ctrl-down': 'window:focus-pane-below'
