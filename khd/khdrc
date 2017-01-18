@@ -39,7 +39,7 @@ cmd + ctrl - h              :   /usr/local/bin/kwmc window -c expand 0.05 west
 cmd + ctrl - j              :   /usr/local/bin/kwmc window -c expand 0.05 south
 cmd + ctrl - k              :   /usr/local/bin/kwmc window -c expand 0.05 north
 cmd + ctrl - l              :   /usr/local/bin/kwmc window -c expand 0.05 east
-cmd + ctrl + alt - h        :   /usr/local/bin/kwmc window -c reduce 0.05 west
-cmd + ctrl + alt - j        :   /usr/local/bin/kwmc window -c reduce 0.05 south
-cmd + ctrl + alt - k        :   /usr/local/bin/kwmc window -c reduce 0.05 north
-cmd + ctrl + alt - l        :   /usr/local/bin/kwmc window -c reduce 0.05 east
+cmd + ctrl + shift - h      :   /usr/local/bin/kwmc window -c reduce 0.05 west
+cmd + ctrl + shift - j      :   /usr/local/bin/kwmc window -c reduce 0.05 south
+cmd + ctrl + shift - k      :   /usr/local/bin/kwmc window -c reduce 0.05 north
+cmd + ctrl + shift - l      :   /usr/local/bin/kwmc window -c reduce 0.05 east
