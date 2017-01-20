@@ -20,7 +20,7 @@ alias preview="open -a Preview"
 alias htop="sudo htop"
 
 # Software update
-alias brew-update='brew update; brew outdated; brew upgrade --all; brew cleanup'
+alias brew-update='brew update; brew outdated; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias pip-update='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
 alias pip3-update='pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U'
 alias apm-update='apm upgrade -c false; apm clean'
