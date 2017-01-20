@@ -92,6 +92,12 @@
     locales: [
       "en-US"
     ]
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: false
