@@ -42,11 +42,9 @@
     fontFamily: "Roboto Mono"
     fontSize: 10
     invisibles: {}
-    preferredLineLength: 100
     scrollSensitivity: 60
     softWrap: true
     softWrapAtPreferredLineLength: true
-    tabLength: 4
   "exception-reporting":
     userId: "7d5bf2a8-56ac-88aa-4ce4-8791fb752f91"
   "file-watcher":
