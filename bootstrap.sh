@@ -123,7 +123,7 @@ link_file git/gitignore ~/.gitignore
 
 # Binaries
 echo "\nInstalling custom binaries"
-binaries=(ssh-key tunnel serve eachdir git-jump pdf-reduce-size)
+binaries=(ssh-key tunnel serve eachdir git-jump pdf-reduce-size brew-update)
 for bin in ${binaries[@]} ; do
     link_file bin/$bin /usr/local/bin/$bin
 done
