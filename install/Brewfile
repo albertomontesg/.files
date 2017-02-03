@@ -29,6 +29,12 @@ brew 'python'
 brew 'python3'
 brew 'r'
 brew 'ruby'
+# Linters
+brew 'chktex'
+brew 'cppcheck'
+brew 'hadolint'
+brew 'jsonlint'
+brew 'shellcheck'
 # C Compiler, debugger and libraries
 brew 'boost'
 brew 'cgal'
@@ -71,7 +77,6 @@ brew 'hadoop'
 brew 'nginx'
 # TeX
 cask 'mactex'
-brew 'chktex'
 brew 'latex-mk'
 # Science
 brew 'ffmpeg', args: ['with-openjpeg', 'with-openssl']
