@@ -1,4 +1,4 @@
-local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
+local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)%{$reset_color%}"
 
 function get_pwd(){
   git_root=$PWD
@@ -16,17 +16,26 @@ function get_pwd(){
 }
 
 function ssh_connection() {
-    if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-        ssh_prompt="[@%{$fg[cyan]%}$(hostname)%{$reset_color%}] "
-    else
-        ssh_prompt=""
-    fi
-    echo $ssh_prompt
+  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    ssh_prompt="[@%{$fg_bold[cyan]%}$(hostname)%{$reset_color%}] "
+  else
+    ssh_prompt=""
+  fi
+  echo $ssh_prompt
 }
 
-PROMPT='$(ssh_connection)$ret_status %{$fg[white]%}$(get_pwd) $(git_prompt_info)%{$reset_color%}%{$reset_color%} '
+function virtual_env() {
+  if [ -n "$VIRTUAL_ENV" ]; then
+    venv_prompt="(%{$fg[yellow]%}$(basename $VIRTUAL_ENV)%{$reset_color%}) "
+  else
+    venv_prompt=""
+  fi
+  echo $venv_prompt
+}
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[cyan]%}"
+PROMPT='$(ssh_connection)$ret_status% $(virtual_env)%{$fg[white]%}$(get_pwd) $(git_prompt_info)%{$reset_color%} '
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✓%{$reset_color%}"

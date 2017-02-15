@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git battery brew copydir copyfile cp emoji osx pylint python tmux virtualenv gpg-agent zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git brew copydir copyfile cp emoji osx pylint python tmux gpg-agent zsh-autosuggestions zsh-syntax-highlighting)
 
 
 source $ZSH/oh-my-zsh.sh
@@ -60,7 +60,7 @@ source ~/.zsh_exports
 
 
 # Autoenv
-# source /usr/local/opt/autoenv/activate.sh
+source $(brew --prefix autoenv)/activate.sh
 # Z command (https://github.com/rupa/z)
 . `brew --prefix`/etc/profile.d/z.sh
 
