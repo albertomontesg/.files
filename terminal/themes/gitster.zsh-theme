@@ -26,14 +26,14 @@ function ssh_connection() {
 
 function virtual_env() {
   if [ -n "$VIRTUAL_ENV" ]; then
-    venv_prompt="(%{$fg[yellow]%}$(basename $VIRTUAL_ENV)%{$reset_color%}) "
+    venv_prompt=" (%{$fg[yellow]%}$(basename $VIRTUAL_ENV)%{$reset_color%})"
   else
     venv_prompt=""
   fi
   echo $venv_prompt
 }
 
-PROMPT='$(ssh_connection)$ret_status% $(virtual_env)%{$fg[white]%}$(get_pwd) $(git_prompt_info)%{$reset_color%} '
+PROMPT='$(ssh_connection)$ret_status$(virtual_env) %{$fg[white]%}$(get_pwd) $(git_prompt_info)%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
