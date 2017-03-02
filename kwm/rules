@@ -3,12 +3,7 @@ kwmc rule owner="Finder" properties={float="true"}
 kwmc rule owner="System Preferences" properties={float="true"}
 kwmc rule owner="Alfred Preferences" properties={float="true"}
 kwmc rule owner="Transmission" properties={float="true"}
-kwmc rule owner="iTerm2" properties={role="AXDialog"} #; space="2"}
-kwmc rule owner="Chrome" properties={role="AXDialog"} #; space="4"}
-# kwmc rule owner="Safari" properties={space="4"}
-# kwmc rule owner="Atom" properties={space="3"}
-# kwmc rule owner="Preview" properties={space="5"}
-# kwmc rule owner="Mail" properties={space="6"}
-# kwmc rule owner="WhatsApp" properties={space="6"}
-# kwmc rule owner="Messenger" properties={space="6"}
-# kwmc rule owner="Skype" properties={space="6"}
+kwmc rule owner="GIMP" properties={float="true"}
+kwmc rule owner="iBooks" properties={float="true"}
+kwmc rule owner="iTerm2" properties={role="AXDialog"}
+kwmc rule owner="Chrome" properties={role="AXDialog"}
