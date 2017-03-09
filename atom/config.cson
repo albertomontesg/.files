@@ -65,7 +65,6 @@
     ignoredMessageTypes: [
       "Warning"
     ]
-    showErrorPanel: false
   "linter-docker": {}
   "linter-matlab": {}
   "linter-pylint": {}
