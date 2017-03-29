@@ -78,3 +78,5 @@ ZSH_HIGHLIGHT_STYLES[command]='fg=white,bold'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=white,bold'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=white,bold'
 ZSH_HIGHLIGHT_STYLES[function]='fg=white,bold'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -28,8 +28,10 @@
       "language-js-specs"
       "latex"
       "latexer"
+      "linter-cpplint"
       "linter-pylint"
     ]
+    excludeVcsIgnoredPaths: false
     projectHome: "/Users/Alberto/Development/github"
     telemetryConsent: "limited"
     themes: [
@@ -40,11 +42,14 @@
   editor:
     backUpBeforeSaving: true
     fontFamily: "Roboto Mono"
-    fontSize: 10
+    fontSize: 12
     invisibles: {}
     scrollSensitivity: 60
     softWrap: true
     softWrapAtPreferredLineLength: true
+    tabLength: 4
+    tabType: "soft"
+    zoomFontWhenCtrlScrolling: true
   "exception-reporting":
     userId: "7d5bf2a8-56ac-88aa-4ce4-8791fb752f91"
   "file-watcher":
@@ -60,14 +65,15 @@
     keep_array_indentation: true
     keep_function_indentation: true
     space_before_conditional: false
-  linter:
-    errorPanelHeight: 188
-    ignoredMessageTypes: [
-      "Warning"
-    ]
+  linter: {}
   "linter-docker": {}
+  "linter-gcc":
+    execPath: "/usr/local/bin/g++-6"
+    gccSuppressWarnings: true
   "linter-matlab": {}
   "linter-pylint": {}
+  "linter-ui-default":
+    decorateOnTreeView: "None"
   "make-runner":
     hidePane: true
   "markdown-themeable-pdf": {}
@@ -98,7 +104,6 @@
     syncHorizontalScroll: true
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: false
   "tree-view-git-branch":
     separator: true
   welcome:

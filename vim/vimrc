@@ -2,6 +2,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set rtp+=/usr/local/opt/fzf
+
 " To work with crontab files
 au FileType crontab setlocal bkc=yes
 
