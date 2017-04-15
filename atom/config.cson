@@ -30,6 +30,8 @@
       "latexer"
       "linter-cpplint"
       "linter-pylint"
+      "linter-gcc"
+      "markdown-preview"
     ]
     excludeVcsIgnoredPaths: false
     projectHome: "/Users/Alberto/Development/github"
@@ -38,11 +40,10 @@
       "one-dark-ui"
       "base16-tomorrow-dark-theme"
     ]
-    useCustomTitleBar: true
+    titleBar: "custom"
   editor:
     backUpBeforeSaving: true
     fontFamily: "Roboto Mono"
-    fontSize: 12
     invisibles: {}
     scrollSensitivity: 60
     softWrap: true
@@ -76,6 +77,8 @@
     decorateOnTreeView: "None"
   "make-runner":
     hidePane: true
+  "markdown-preview-plus":
+    enableLatexRenderingByDefault: true
   "markdown-themeable-pdf": {}
   minimap:
     adjustAbsoluteModeHeight: true
@@ -84,6 +87,8 @@
     tabSizing: "Minimum"
   "python-isort":
     sortOnSave: true
+  "python-yapf":
+    formatOnSave: true
   "spell-check":
     grammars: [
       "source.asciidoc"
