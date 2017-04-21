@@ -61,9 +61,12 @@ source ~/.zsh_exports
 
 # Autoenv
 source $(brew --prefix autoenv)/activate.sh
+
 # Z command (https://github.com/rupa/z)
 . `brew --prefix`/etc/profile.d/z.sh
 
+# The Fuck
+eval $(thefuck --alias)
 
 ###### Personalize ZSH plugins ######
 # tmux
