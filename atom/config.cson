@@ -32,6 +32,8 @@
       "linter-pylint"
       "linter-gcc"
       "markdown-preview"
+      "pdf-view"
+      "markdown-themeable-pdf"
     ]
     excludeVcsIgnoredPaths: false
     projectHome: "/Users/Alberto/Development/github"
@@ -44,6 +46,7 @@
   editor:
     backUpBeforeSaving: true
     fontFamily: "Roboto Mono"
+    fontSize: 12
     invisibles: {}
     scrollSensitivity: 60
     softWrap: true
@@ -75,6 +78,8 @@
   "linter-pylint": {}
   "linter-ui-default":
     decorateOnTreeView: "None"
+    panelHeight: 69
+    showPanel: true
   "make-runner":
     hidePane: true
   "markdown-preview-plus":
@@ -82,6 +87,7 @@
   "markdown-themeable-pdf": {}
   minimap:
     adjustAbsoluteModeHeight: true
+    disablePythonDocLinks: true
     scrollAnimation: true
   "one-dark-ui":
     tabSizing: "Minimum"
@@ -89,6 +95,12 @@
     sortOnSave: true
   "python-yapf":
     formatOnSave: true
+  "remote-sync":
+    autoHideLogPanel: true
+    foldLogPanel: true
+  script:
+    cwdBehavior: "Directory of the script"
+    enableExecTime: false
   "spell-check":
     grammars: [
       "source.asciidoc"
