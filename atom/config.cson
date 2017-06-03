@@ -79,7 +79,6 @@
   "linter-ui-default":
     decorateOnTreeView: "None"
     panelHeight: 69
-    showPanel: true
   "make-runner":
     hidePane: true
   "markdown-preview-plus":
