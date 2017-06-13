@@ -17,3 +17,7 @@ fi
 
 # SSH
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Spark
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
