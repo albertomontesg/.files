@@ -32,7 +32,6 @@
       "linter-pylint"
       "linter-gcc"
       "markdown-preview"
-      "pdf-view"
       "markdown-themeable-pdf"
     ]
     excludeVcsIgnoredPaths: false
