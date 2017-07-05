@@ -1,45 +1,45 @@
-khd kwm on
+# khd kwm on
 
 # Reload kwmc and khd configs
-cmd + ctrl - r              :   /usr/local/bin/khd -e "reload"
-cmd + ctrl + alt - r        :   /usr/local/bin/kwmc config relaod
+cmd + ctrl - r              :   khd -e "reload"
+cmd + ctrl + alt - r        :   kwmc config relaod
 
 # Set Space Tiling Mode To BSP
-cmd + alt + ctrl - b        :   /usr/local/bin/kwmc space -t bsp
+cmd + alt + ctrl - b        :   kwmc space -t bsp
 
 # Set Space Tiling Mode To Monocle
-cmd + alt + ctrl - m        :   /usr/local/bin/kwmc space -t monocle
+cmd + alt + ctrl - m        :   kwmc space -t monocle
 
 # Set Space Tiling Mode To Floating
-cmd + alt + ctrl - f        :   /usr/local/bin/kwmc space -t float
+cmd + alt + ctrl - f        :   kwmc space -t float
 
 # Move between focused windows
-cmd + ctrl - right          :   /usr/local/bin/kwmc window -f east
-cmd + ctrl - left           :   /usr/local/bin/kwmc window -f west
-cmd + ctrl - up             :   /usr/local/bin/kwmc window -f north
-cmd + ctrl - down           :   /usr/local/bin/kwmc window -f south
+cmd + ctrl - right          :   kwmc window -f east
+cmd + ctrl - left           :   kwmc window -f west
+cmd + ctrl - up             :   kwmc window -f north
+cmd + ctrl - down           :   kwmc window -f south
 
 # Swap between spaces
-cmd + alt - right           :   /usr/local/bin/kwmc window -m space right
-cmd + alt - left            :   /usr/local/bin/kwmc window -m space left
-cmd + alt - up              :   /usr/local/bin/kwmc window -m display 1 \
-                                /usr/local/bin/kwmc display -f 1
-cmd + alt - down            :   /usr/local/bin/kwmc window -m display 0 \
-                                /usr/local/bin/kwmc display -f 0
+cmd + alt - right           :   kwmc window -m space right
+cmd + alt - left            :   kwmc window -m space left
+cmd + alt - up              :   kwmc window -m display 1 \
+                                kwmc display -f 1
+cmd + alt - down            :   kwmc window -m display 0 \
+                                kwmc display -f 0
 
 # Change focus between displays
-cmd - up                    :   /usr/local/bin/kwmc display -f 1
-cmd - down                  :   /usr/local/bin/kwmc display -f 0
+cmd - up                    :   kwmc display -f 1
+cmd - down                  :   kwmc display -f 0
 
 # Resize focused window to its container
-cmd + alt + ctrl - l        :   /usr/local/bin/kwmc window -r focused
+cmd + alt + ctrl - l        :   kwmc window -r focused
 
 # Resize containers
-cmd + ctrl - h              :   /usr/local/bin/kwmc window -c expand 0.05 west
-cmd + ctrl - j              :   /usr/local/bin/kwmc window -c expand 0.05 south
-cmd + ctrl - k              :   /usr/local/bin/kwmc window -c expand 0.05 north
-cmd + ctrl - l              :   /usr/local/bin/kwmc window -c expand 0.05 east
-cmd + ctrl + shift - h      :   /usr/local/bin/kwmc window -c reduce 0.05 west
-cmd + ctrl + shift - j      :   /usr/local/bin/kwmc window -c reduce 0.05 south
-cmd + ctrl + shift - k      :   /usr/local/bin/kwmc window -c reduce 0.05 north
-cmd + ctrl + shift - l      :   /usr/local/bin/kwmc window -c reduce 0.05 east
+cmd + ctrl - h              :   kwmc window -c expand 0.05 west
+cmd + ctrl - j              :   kwmc window -c expand 0.05 south
+cmd + ctrl - k              :   kwmc window -c expand 0.05 north
+cmd + ctrl - l              :   kwmc window -c expand 0.05 east
+cmd + ctrl + shift - h      :   kwmc window -c reduce 0.05 west
+cmd + ctrl + shift - j      :   kwmc window -c reduce 0.05 south
+cmd + ctrl + shift - k      :   kwmc window -c reduce 0.05 north
+cmd + ctrl + shift - l      :   kwmc window -c reduce 0.05 east

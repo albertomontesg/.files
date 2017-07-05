@@ -78,7 +78,6 @@
   "linter-ui-default":
     decorateOnTreeView: "None"
     panelHeight: 69
-    showPanel: true
   "make-runner":
     hidePane: true
   "markdown-preview-plus":
@@ -90,8 +89,7 @@
     scrollAnimation: true
   "one-dark-ui":
     tabSizing: "Minimum"
-  "python-isort":
-    sortOnSave: true
+  "python-isort": {}
   "python-yapf":
     formatOnSave: true
   "remote-sync":
