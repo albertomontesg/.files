@@ -98,12 +98,13 @@ install_clone_repo $ZSH_AUTOSUGGESTIONS_REPO $ZSH_AUTOSUGGESTIONS_DIR "Zsh Autos
 install_clone_repo https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm ~/.tmux/plugins
 
 # Install kwm files
-[ ! -d ~/.kwm ] && mkdir ~/.kwm
-kwm_files=(kwmrc rules spaces)
-for file in ${kwm_files[@]} ; do
-    link_file kwm/$file ~/.kwm/$file
-done
-link_file khd/khdrc ~/.khdrc
+# [ ! -d ~/.kwm ] && mkdir ~/.kwm
+# kwm_files=(kwmrc rules spaces)
+# for file in ${kwm_files[@]} ; do
+#     link_file kwm/$file ~/.kwm/$file
+# done
+# link_file khd/khdrc ~/.khdrc
+link_file kwm/chunkwmrc ~/.chunkwmrc
 
 # Atom files
 echo "\nInstalling Atom files and packages"

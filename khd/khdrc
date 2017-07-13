@@ -1,35 +1,52 @@
-# khd kwm on
 
 # Reload kwmc and khd configs
 cmd + ctrl - r              :   khd -e "reload"
-cmd + ctrl + alt - r        :   kwmc config relaod
+cmd + ctrl + alt - r        :   sh ~/.chunkwmrc
 
 # Set Space Tiling Mode To BSP
-cmd + alt + ctrl - b        :   kwmc space -t bsp
+cmd + alt + ctrl - b        :   chunkc tiling::desktop --layout bsp
 
 # Set Space Tiling Mode To Monocle
-cmd + alt + ctrl - m        :   kwmc space -t monocle
+cmd + alt + ctrl - m        :   chunkc tiling::desktop --layout monocle
 
 # Set Space Tiling Mode To Floating
-cmd + alt + ctrl - f        :   kwmc space -t float
+cmd + alt + ctrl - f        :   chunkc tiling::desktop --layout float
 
 # Move between focused windows
-cmd + ctrl - right          :   kwmc window -f east
-cmd + ctrl - left           :   kwmc window -f west
-cmd + ctrl - up             :   kwmc window -f north
-cmd + ctrl - down           :   kwmc window -f south
+cmd + ctrl - right          :   chunkc tiling::window --focus east
+cmd + ctrl - left           :   chunkc tiling::window --focus west
+cmd + ctrl - up             :   chunkc tiling::window --focus north
+cmd + ctrl - down           :   chunkc tiling::window --focus south
 
-# Swap between spaces
-cmd + alt - right           :   kwmc window -m space right
-cmd + alt - left            :   kwmc window -m space left
-cmd + alt - up              :   kwmc window -m display 1 \
-                                kwmc display -f 1
-cmd + alt - down            :   kwmc window -m display 0 \
-                                kwmc display -f 0
+# Send window to desktop
+cmd + alt - right           :   chunkc tiling::window --send-to-desktop next; \
+                                chunkc tiling::monitor --focus next
+cmd + alt - left            :   chunkc tiling::window --send-to-desktop prev; \
+                                chunkc tiling::monitor --focus prev
+cmd + alt - up              :   chunkc tiling::window --send-to-monitor 2 \
+                                chunkc tiling::monitor --focus 2
+cmd + alt - down            :   chunkc tiling::window --send-to-monitor 1 \
+                                chunkc tiling::monitor --focus 1
 
 # Change focus between displays
-cmd - up                    :   kwmc display -f 1
-cmd - down                  :   kwmc display -f 0
+cmd - up                    :   chunkc tiling::monitor -focus 2
+cmd - down                  :   chunkc tiling::monitor -focus 1
+
+# Rotate tree
+alt - r                     :   chunkc tiling::desktop --rotate 90
+# Mirror tree y-axis
+alt - y                     :   chunkc tiling::desktop --mirror vertical
+# Mirror tree x-axis
+alt - x                     :   chunkc tiling::desktop --mirror horizontal
+# Toggle window fullscreen
+alt - f                     :   chunkc tiling::window --toggle fullscreen
+# Float / unfloat window
+alt - t                     :   chunkc tiling::window --toggle float
+# Equaliza all windows on desktop
+alt - e                     :   chunkc tiling::desktop --equalize
+# toggle sticky, float and resize to picture-in-picture size
+alt - s                     :   chunkc tiling::window --toggle sticky; \
+                                chunkc tiling::window --warp-floating pip-right
 
 # Resize focused window to its container
 cmd + alt + ctrl - l        :   kwmc window -r focused

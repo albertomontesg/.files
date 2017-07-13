@@ -29,7 +29,6 @@
       "latex"
       "latexer"
       "linter-cpplint"
-      "linter-pylint"
       "linter-gcc"
       "markdown-preview"
       "markdown-themeable-pdf"
