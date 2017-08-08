@@ -43,7 +43,7 @@
     titleBar: "custom"
   editor:
     backUpBeforeSaving: true
-    fontFamily: "Roboto Mono"
+    fontFamily: "FiraCode-Light"
     fontSize: 12
     invisibles: {}
     scrollSensitivity: 60
@@ -114,6 +114,7 @@
     ignoreWhitespace: true
     leftEditorColor: "red"
     rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
     syncHorizontalScroll: true
   "tree-view":
     hideIgnoredNames: true
