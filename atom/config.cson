@@ -1,9 +1,12 @@
 "*":
   "atom-beautify":
     general:
+      _analyticsUserId: "627c798c-3d55-4c98-bc7d-87ce6dc55d33"
       analytics: false
   "atom-clock":
     showClockIcon: true
+  "atom-package-deps":
+    ignored: []
   "autocomplete-plus":
     fileBlacklist: [
       "*.md"
@@ -26,12 +29,12 @@
     disabledPackages: [
       "language-js-specs"
       "language-js-specs"
-      "latex"
       "latexer"
       "linter-cpplint"
       "linter-gcc"
       "markdown-preview"
       "markdown-themeable-pdf"
+      "touch-bar-utility"
     ]
     excludeVcsIgnoredPaths: false
     projectHome: "/Users/Alberto/Development/github"
@@ -76,7 +79,7 @@
   "linter-pylint": {}
   "linter-ui-default":
     decorateOnTreeView: "None"
-    panelHeight: 69
+    panelHeight: 103
   "make-runner":
     hidePane: true
   "markdown-preview-plus":

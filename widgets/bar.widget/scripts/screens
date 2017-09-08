@@ -1,5 +1,5 @@
 # Display spaces using in a bar that accepts stdout
-kwmc=/usr/local/bin/kwmc
+kwmc=/usr/local/bin/chunkc
 
 
 # get active and previous space
@@ -13,7 +13,7 @@ while read -r line
 do
     spaces[i]="$line"
     (( i++ ))
-done <<< "$($kwmc query space list)"
+done <<< "$($kwmc tiling::query)"
 
 # populate bar with icons
 bar=()
@@ -46,4 +46,4 @@ do
 	fi
 done
 
-echo "$($kwmc query space active mode) @ ${bbar[*]} @ $($kwmc query window focused name)"
+echo "$($kwmc tiling::query --desktop mode) @ ${bbar[*]} @ $($kwmc tiling::query --window name)"

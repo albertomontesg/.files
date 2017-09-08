@@ -10,8 +10,8 @@ style: """
   -webkit-font-smoothing: antialiased
   color: #05d0f8
   font: 12px Roboto Mono
-  left: 15px
-  top: 4px
+  left: 25px
+  top: 7px
   width:850px
   height: 16px
   white-space: nowrap
@@ -91,4 +91,5 @@ update: (output, domEl) ->
      file = file + '…';
 
 
-  $(domEl).find('.kwmmode').html("<span>#{mode}</span><span class='icon'> </span> " + screenhtml + "<span class='icon'> </span> <span>#{win}</span><span2>#{file}</span2>")
+  $(domEl).find('.kwmmode').html("<span>#{mode}</span><span class='icon'> </span> " + #+ screenhtml + "<span class='icon'> </span>
+  "<span>#{win}</span><span2>#{file}</span2>")

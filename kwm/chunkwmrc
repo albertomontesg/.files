@@ -3,8 +3,8 @@
 # NOTE: specify the absolutepath to the directory to use when
 #       loading a plugin. '~' expansion is supported.
 #
-chunkc plugin_dir /usr/local/opt/chunkwm/share/chunkwm_plugins
-chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm_plugins
+chunkc plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
+chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
 
 #
 # NOTE: if enabled, chunkwm will monitor the specified plugin_dir

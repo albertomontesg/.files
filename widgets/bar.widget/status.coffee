@@ -9,8 +9,8 @@ style: """
   -webkit-font-smoothing: antialiased
   font: 12px Roboto Mono
   text-transform: lowercase
-  right: 20px
-  top: 2px
+  right: 30px
+  top: 5px
   color: #05d0f8
   height: 13
   .weather_forecast
@@ -72,7 +72,7 @@ style: """
 
 timeAndDate: (date, time) ->
   # returns a formatted html string with the date and time
-  return "<span class='white'><span class='icon'>&nbsp&nbsp&nbsp&nbsp</span>#{date}</span>&nbsp&nbsp<span class='icon'>&nbsp</span>#{time}</span>";
+  return "<span class='white'><span class='icon'>&nbsp&nbsp&nbsp&nbsp</span>#{date}&nbsp&nbsp<span class='icon'>&nbsp</span>#{time}</span></span>";
 
 batteryStatus: (battery, state) ->
   #returns a formatted html string current battery percentage, a representative icon and adds a lighting bolt if the
@@ -96,14 +96,13 @@ batteryStatus: (battery, state) ->
   else if batnum < 15
     return "<span class='red'><span class='icon'>  </span>#{batnum}%</span>"
 
-getWifiStatus: (status) ->
-  console.log(status)
+getWifiStatus: (status, netName, netIP) ->
   if status == "Wi-Fi"
-    return "<span class='wifi'>&nbsp&nbsp</span>";
+    return "<span class='wifi '>&nbsp&nbsp&nbsp</span><span class='white'>#{netName}&nbsp</span>"
   if status == 'USB 10/100/1000 LAN' or status == 'Apple USB Ethernet Adapter'
-    return "<span class='wifi'>&nbsp&nbsp</span>";
+    return "<span class='wifi '>&nbsp&nbsp&nbsp</span><span class='white'>#{netIP}</span>"
   else
-    return "<span class='grey wifi'>&nbsp&nbsp</span>";
+    return "<span class='grey wifi'>&nbsp&nbsp&nbsp</span><span class='white'>--&nbsp&nbsp&nbsp</span>"
 
 getCPU: (cpu) ->
   cpuNum = parseFloat(cpu)
@@ -152,9 +151,11 @@ update: (output, domEl) ->
   up   = values[7]
 
   netStatus = values[8].replace /^\s+|\s+$/g, ""
-
+  netName = values[9]
+  netIP = values[10]
 
 
   # create an HTML string to be displayed by the widget
-  htmlString = @getWifiStatus(netStatus) + @batteryStatus(battery, isCharging) + "<span class='icon'>&nbsp&nbsp</span>" + @getNetTraffic(down, up) + @getMem(mem) + @getCPU(cpu) + "<span class='icon'>&nbsp</span>" + @timeAndDate(date, time)
+  # htmlString = @getWifiStatus(netStatus) + @batteryStatus(battery, isCharging) + "<span class='icon'>&nbsp&nbsp</span>" + @getNetTraffic(down, up) + @getMem(mem) + @getCPU(cpu) + "<span class='icon'>&nbsp</span>" + @timeAndDate(date, time)
+  htmlString = "<span class='icon'>&nbsp&nbsp</span>" + @getWifiStatus(netStatus) + @batteryStatus(battery, isCharging) + "<span class='icon'>&nbsp</span>" + @timeAndDate(date, time)
   $(domEl).find('.compstatus').html(htmlString)
