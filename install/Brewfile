@@ -1,144 +1,237 @@
 ### TAPS Listing ###
 # Homebrew
-tap 'homebrew/boneyard'
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'homebrew/dupes'
-tap 'homebrew/fuse'
-tap 'homebrew/games'
-tap 'homebrew/php'
-tap 'homebrew/python'
-tap 'homebrew/science'
-tap 'homebrew/services'
-tap 'homebrew/tex'
-tap 'homebrew/versions'
+tap "homebrew/boneyard"
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "homebrew/dupes"
+tap "homebrew/fuse"
+tap "homebrew/games"
+tap "homebrew/php"
+tap "homebrew/python"
+tap "homebrew/science"
+tap "homebrew/services"
+tap "homebrew/tex"
+tap "homebrew/versions"
 # Cask
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
+tap "caskroom/cask"
+tap "caskroom/fonts"
 # Others
-tap 'koekeishiya/khd'
-tap 'koekeishiya/kwm'
-tap 'neovim/neovim'
+tap "koekeishiya/formulae"
+tap "crisidev/chunkwm"
+tap "ethereum/ethereum"
+tap "neovim/neovim"
 
 ### INSTALL PACKAGES ###
 # Languages
-brew 'go'
-brew 'lua'
-brew 'node'
-brew 'python'
-brew 'python3'
-brew 'r'
-brew 'ruby'
+brew "go"
+brew "lua"
+brew "node"
+brew "perl"
+brew "r"
+brew "ruby"
 # Linters
-brew 'chktex'
-brew 'cppcheck'
-brew 'hadolint'
-brew 'jsonlint'
-brew 'shellcheck'
+brew "chktex"
+brew "cppcheck"
+brew "hadolint"
+brew "jsonlint"
+brew "shellcheck"
 # C Compiler, debugger and libraries
-brew 'boost'
-brew 'cgal'
-brew 'cmake'
-brew 'gcc'
-brew 'gcc49'
-brew 'gdb'
-brew 'make'
+brew "arpack"
+brew "boost"
+brew "cgal"
+brew "cmake"
+brew "eigen"
+brew "gcc"
+brew "gcc@4.9"
+brew "gdb"
+brew "lapack"
+brew "openblas"
+# Building software
+brew "automake"
+brew "make"
+brew "bazel"
+# Python
+brew "autoenv"
+brew "boost-python", args: ["c++11", "with-python3"]
+brew "homebrew/science/matplotlib", args: ["with-pyqt", "with-python3", "with-tex"]
+brew "numpy"
+brew "pyenv-virtualenv"
+brew "pyenv-virtualenvwrapper"
+brew "python"
+brew "python3"
 # Zsh & terminal
-brew 'tmux'
-brew 'z'
-brew 'zsh'
-brew 'zsh-completions'
+brew "reattach-to-user-namespace"
+brew "tmux"
+brew "z"
+brew "zsh"
+# Completions
+brew "django-completion"
+brew "docker-completion"
+brew "zsh-completions"
+# WM
+brew "crisidev/chunkwm/chunkwm", args: ["with-logging"]
+brew "koekeishiya/formulae/khd"
+brew "koekeishiya/formulae/kwm"
 # Shell utilities
-brew 'curl', args: ['with-openssl']
-brew 'gnupg2'
-brew 'gpg-agent'
-brew 'grep'
-brew 'htop-osx'
-brew 'nano'
-brew 'openssh'
-brew 'pstree'
-brew 'thefuck'
-brew 'tree'
-brew 'unrar'
-brew 'vim'
-brew 'watch'
-brew 'wget'
+brew "awscli"
+brew "chrome-cli"
+brew "coreutils"
+brew "cpulimit"
+brew "curl", args: ["with-openssl"]
+brew "fzf"
+brew "gnupg2"
+brew "gpg-agent"
+brew "grep"
+brew "htop-osx"
+brew "nano"
+brew "openssh"
+brew "openssl"
+brew "pstree"
+brew "thefuck"
+brew "tree"
+brew "unrar"
+brew "vim"
+brew "watch"
+brew "wget"
+# File systems
+cask "fuse"
+brew "ext4fuse"
+brew "ntfs-3g"
+brew "sshfs"
 # Git and extra
-brew 'gist'
-brew 'git'
-brew 'git-extras'
-brew 'git-lfs'
+brew "gist"
+brew "git"
+brew "git-extras"
+brew "git-lfs"
 # Databases
-brew 'mongodb'
-brew 'mysql'
-brew 'postgresql'
+brew "mongodb"
+brew "mysql"
+brew "leveldb"
+brew "lmdb"
+brew "postgresql"
+brew "sqlite"
 # Server
-cask 'java'
-brew 'hadoop'
-brew 'nginx'
+brew "apache-spark"
+cask "java"
+brew "hadoop"
+brew "nginx"
 # TeX
-cask 'mactex'
-brew 'latex-mk'
+cask "mactex"
+brew "latex-mk"
 # Science
-brew 'ffmpeg', args: ['with-openjpeg', 'with-openssl']
-brew 'hdf5'
-brew 'imagemagick', args: ['with-webp']
-brew 'open-mpi'
-brew 'opencv3', args: ['with-contrib', 'with-ffmpeg', 'with-python3', 'without-test']
-brew 'protobuf'
+brew "ffmpeg", args: ["with-openjpeg", "with-openssl"]
+brew "hdf5"
+brew "imagemagick", args: ["with-webp"]
+brew "open-mpi"
+brew "opencv"
+brew "opencv3", args: ["with-contrib", "with-ffmpeg", "with-python3", "without-test"]
+brew "protobuf"
 # Extra
-brew 'autoenv'
-brew 'bazel'
-brew 'docker'
-brew 'extract_url'
-brew 'keybase'
-brew 'khd'
-brew 'kwm'
-brew 'mas'
-brew 'ntfs-3g'
-brew 'pinentry-mac'
-brew 'speedtest_cli'
-brew 'sshfs'
-brew 'urlview'
-brew 'wireshark'
-brew 'youtube-dl'
+brew "autoenv"
+brew "docker"
+brew "doxygen"
+brew "ethereum/ethereum/ethereum"
+brew "extract_url"
+brew "ffmpeg", args: ["with-openjpeg", "with-openssl"]
+brew "fontconfig"
+brew "geoip"
+brew "highlight"
+brew "keybase"
+brew "neofetch"
+brew "neovim"
+brew "openjpeg"
+brew "pandoc"
+brew "pass"
+brew "pinentry-mac"
+brew "pinentry"
+brew "pipes-sh"
+brew "pkg-config"
+brew "pstree"
+brew "rdiff-backup"
+brew "speedtest_cli"
+brew "stress"
+brew "swig"
+brew "terraform"
+brew "thefuck"
+brew "urlview"
+brew "vitetris"
+brew "wireshark"
+brew "xvid"
+brew "youtube-dl"
+
 
 ### INSTALL APPLICATIONS ###
 # Applications
-cask 'alfred'
-cask 'atom'
-cask 'dash'
-cask 'docker'
-cask 'dropbox'
-cask 'evernote'
-cask 'google-chrome'
-cask 'google-drive'
-cask 'gpgtools'
-cask 'iterm2'
-cask 'messenger'
-cask 'osxfuse'
-cask 'skype'
-cask 'slack'
-cask 'slic3r'
-cask 'symboliclinker'
-cask 'telegram'
-cask 'transmission'
-cask 'vlc'
-cask 'whatsapp'
-cask 'wireshark-chmodbpf'
-cask 'xquartz'
+cask "alfred"
+cask "atom"
+cask "bitbar"
+cask "dash"
+cask "docker"
+cask "dropbox"
+cask "evernote"
+cask "gimp"
+cask "google-chrome"
+cask "google-drive"
+cask "gpgtools"
+cask "grammarly"
+cask "istat-menus"
+cask "iterm2"
+cask "keybase"
+cask "laverna"
+cask "markdown-service-tools"
+cask "mendeley-desktop"
+cask "messenger"
+cask "nteract"
+cask "openscad"
+cask "pibakery"
+cask "plex-media-server"
+cask "repetier-host"
+cask "rstudio"
+cask "skim"
+cask "skype"
+cask "slack"
+cask "slic3r"
+cask "symboliclinker"
+cask "telegram-desktop"
+cask "transmission"
+cask "turbo-boost-switcher"
+cask "virtualbox"
+cask "vivaldi"
+cask "vlc"
+cask "whatsapp"
+cask "wireshark-chmodbpf"
+cask "wireshark"
 # Fonts
-cask 'font-roboto'
-cask 'font-roboto-mono'
-cask 'font-roboto-mono-for-powerline'
+cask "font-fira-code"
+cask "font-firacode-nerd-font"
+cask "font-firacode-nerd-font-mono"
+cask "font-fontawesome"
+cask "font-roboto"
+cask "font-roboto-mono"
+cask "font-roboto-mono-for-powerline"
+cask "font-titillium-web"
+cask "font-vt323"
+cask "font-xkcd"
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-cask 'qlcolorcode'
-cask 'qlstephen'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'qlprettypatch'
-cask 'quicklook-csv'
-cask 'betterzipql'
-cask 'qlimagesize'
-cask 'webpquicklook'
-cask 'suspicious-package'
+cask "qlcolorcode"
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "qlprettypatch"
+cask "quicklook-csv"
+cask "betterzipql"
+cask "qlimagesize"
+cask "webpquicklook"
+cask "suspicious-package"
+
+### Mac App Store ###
+mas "Encrypto", id: 935235287
+mas "iStudiez Pro", id: 402989379
+mas "Keynote", id: 409183694
+mas "Novabench", id: 411466132
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "PiPifier", id: 1160374471
+mas "The Unarchiver", id: 425424353
+mas "Todoist", id: 585829637
+mas "Xcode", id: 497799835
