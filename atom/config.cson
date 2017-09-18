@@ -35,6 +35,7 @@
       "markdown-preview"
       "markdown-themeable-pdf"
       "touch-bar-utility"
+      "linter"
     ]
     excludeVcsIgnoredPaths: false
     projectHome: "/Users/Alberto/Development/github"
