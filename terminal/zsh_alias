@@ -21,6 +21,7 @@ alias reload="source ~/.zshrc"
 alias services="brew services"
 alias preview="open -a Preview"
 alias htop="sudo htop"
+# alias vim="vim --servername VIM"
 
 # Software update
 # alias brew-update='brew update; brew outdated; brew upgrade; brew prune; brew cleanup; brew doctor'

@@ -17,16 +17,20 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'ctrlpvim/ctrlp.vim'
-
+Plugin 'tpope/vim-commentary'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
+" Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
-Plugin 'vim-scripts/a.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'joonty/vim-do'
 
-" ----- LaTeX -----
+" ----- LaTeX ---------------------------------------------------------
 Plugin 'lervag/vimtex'
 
+" ----- Working on remote ---------------------------------------------
+" Plugin 'eshion/vim-sync'
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
@@ -35,13 +39,21 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
 
 " ----- man pages, tmux -----------------------------------------------
-Plugin 'jez/vim-superman'
+" Plugin 'jez/vim-superman'
 Plugin 'christoomey/vim-tmux-navigator'
 
 " ----- Syntax plugins ------------------------------------------------
 Plugin 'jez/vim-c0'
 Plugin 'jez/vim-ispc'
 Plugin 'kchmck/vim-coffee-script'
+
+
+" ----- Python plugins ------------------------------------------------
+Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
+" Plugin 'davidhalter/jedi-vim'
+Plugin 'alfredodeza/pytest.vim'
+
+
 
 call vundle#end()
 
@@ -51,13 +63,24 @@ filetype plugin indent on
 " colors
 syntax on
 " ui config
-set number
-set showcmd
+set number relativenumber
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 set cursorline
 filetype indent on
 set wildmenu
+set exrc
 set lazyredraw
 set showmatch
+set textwidth=80
+set wrapmargin=2
+set colorcolumn=+1        " highlight column after 'textwidth'
+set encoding=utf-8
+" set shortmess=a
 " search
 set incsearch
 set hlsearch
@@ -67,7 +90,7 @@ set foldenable
 set foldlevelstart=10
 set foldnestmax=10
 " noremap <space> za
-set foldmethod=syntax
+set foldmethod=indent
 
 
 set backspace=indent,eol,start
@@ -112,7 +135,7 @@ let g:airline_theme='base16_spacemacs'
 " Open/close NERDTree Tabs with \t
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 " To have NERDTree always open on startup
-let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_open_on_console_startup = 0
 
 
 " ----- ctrlpvim/ctrlp -----
@@ -133,21 +156,26 @@ nmap <leader>p :CtrlP<cr>
 " ----- scrooloose/syntastic settings -----
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
+let g:syntastic_aggregate_errors = 1
 augroup mySyntastic
   au!
-  au FileType tex let b:syntastic_mode = "passive"
+  au FileType tex,python let b:syntastic_mode = "passive"
 augroup END
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_check_on_wq = 0
 
 
 " ----- xolox/vim-easytags settings -----
 " Where to look for tags files
-set tags=./tags;,~/.vimtags
+" set tags=~/.vimtags
 " Sensible defaults
-let g:easytags_events = ['BufReadPost', 'BufWritePost']
-let g:easytags_async = 1
-let g:easytags_dynamic_files = 2
-let g:easytags_resolve_links = 1
-let g:easytags_suppress_ctags_warning = 1
+" let g:easytags_events = ['BufReadPost', 'BufWritePost']
+" let g:easytags_async = 1
+" let g:easytags_dynamic_files = 2
+" let g:easytags_resolve_links = 1
+" let g:easytags_suppress_ctags_warning = 1
+" let g:easytags_python_enable = 1
+" let g:easytags_auto_highlight = 0
 
 " ----- majutsushi/tagbar settings -----
 " Open/close tagbar with \b
@@ -156,10 +184,25 @@ nmap <silent> <leader>b :TagbarToggle<CR>
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 
 
+" ----- lervag/vimtex -----
+"  Continuous compilation
+let g:vimtex_compiler_latexmk = {
+        \ 'callback' : 1,
+        \ 'continuous' : 1,
+        \ 'executable' : 'latexmk',
+\}
+let g:vimtex_latexmk_continuous = 1
+let g:vimtex_fold_enable = 1
+" let g:vimtex_view_general_viewer = 'open'
+" let g:vimtex_view_general_options = '-a Skim'
+
+" ----- eshion/vim-sync -----
+" autocmd BufWritePost * :call SyncUploadFile() | redraw!
+" autocmd BufReadPre * :call SyncDownloadFile()
+
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display "hunks" if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
-
 
 " ----- Raimondi/delimitMate settings -----
 let delimitMate_expand_cr = 1
@@ -173,4 +216,22 @@ augroup END
 
 " ----- jez/vim-superman settings -----
 " better man page support
-noremap K :SuperMan <cword><CR>
+" noremap K :SuperMan <cword><CR>
+
+
+" ----- google/yapf -----
+map <C-Y> :call yapf#YAPF()<cr>
+imap <C-Y> <c-o>:call yapf#YAPF()<cr>
+
+" ----- davidhalter/jedi-vim -----
+" let g:jedi#use_splits_not_buffers = "right"
+
+
+" ----- custom key mappings -----
+" set <M-j> = "\ej"
+" set <M-l> = "\el"
+" map <M-j> :bn
+" map <M-l> :bp
+
+
+set secure
