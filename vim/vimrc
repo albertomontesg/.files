@@ -29,8 +29,6 @@ Plugin 'joonty/vim-do'
 " ----- LaTeX ---------------------------------------------------------
 Plugin 'lervag/vimtex'
 
-" ----- Working on remote ---------------------------------------------
-" Plugin 'eshion/vim-sync'
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
@@ -43,10 +41,9 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'christoomey/vim-tmux-navigator'
 
 " ----- Syntax plugins ------------------------------------------------
-Plugin 'jez/vim-c0'
-Plugin 'jez/vim-ispc'
-Plugin 'kchmck/vim-coffee-script'
-
+" Plugin 'jez/vim-c0'
+" Plugin 'jez/vim-ispc'
+" Plugin 'kchmck/vim-coffee-script'
 
 " ----- Python plugins ------------------------------------------------
 Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
@@ -195,10 +192,6 @@ let g:vimtex_latexmk_continuous = 1
 let g:vimtex_fold_enable = 1
 " let g:vimtex_view_general_viewer = 'open'
 " let g:vimtex_view_general_options = '-a Skim'
-
-" ----- eshion/vim-sync -----
-" autocmd BufWritePost * :call SyncUploadFile() | redraw!
-" autocmd BufReadPre * :call SyncDownloadFile()
 
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display "hunks" if the diff is non-zero
