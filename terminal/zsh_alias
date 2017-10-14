@@ -15,7 +15,7 @@ alias ws="cd ~/Workspace"
 alias cvl="cd ~/Workspace/CVL"
 alias eth="cd ~/Documents/UniversityETHZ/Courses"
 alias g="git"
-alias h="history"
+alias h="history | grep"
 alias j="jobs"
 alias reload="source ~/.zshrc"
 alias services="brew services"
@@ -24,7 +24,6 @@ alias htop="sudo htop"
 # alias vim="vim --servername VIM"
 
 # Software update
-# alias brew-update='brew update; brew outdated; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias pip-update='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
 alias pip3-update='pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U'
 alias apm-update='apm upgrade -c false; apm clean'

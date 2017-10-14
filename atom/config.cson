@@ -80,7 +80,8 @@
   "linter-pylint": {}
   "linter-ui-default":
     decorateOnTreeView: "None"
-    panelHeight: 103
+    panelHeight: 300
+    showPanel: true
   "make-runner":
     hidePane: true
   "markdown-preview-plus":
