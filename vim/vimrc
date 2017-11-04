@@ -4,6 +4,7 @@ set nocompatible
 filetype off
 
 set runtimepath+=~/.vim/bundle/Vundle.vim
+" set runtimepath+=/usr/local/opt/fzf
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -20,15 +21,21 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'junegunn/fzf'
+Plugin 'mileszs/ack.vim'
+Plugin 'qpkorr/vim-bufkill'
+Plugin 'tpope/vim-eunuch'
 
 " ----- Vim as a programmer's text editor -----------------------------
+Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-commentary'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'xolox/vim-misc'
 Plugin 'tpope/vim-surround'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'rizzatti/dash.vim'
 " Plugin 'joonty/vim-do'
 
 " ----- LaTeX ---------------------------------------------------------
@@ -108,6 +115,7 @@ set foldnestmax=10
 set foldmethod=indent
 set conceallevel=2
 
+set clipboard=unnamed
 
 set backspace=indent,eol,start
 set ruler
@@ -116,6 +124,13 @@ set termguicolors
 syntax on
 
 set mouse=a
+
+if has('nvim')
+	let g:loaded_sensible=0
+endif
+
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " ----- bling/vim-airline settings -----
 set laststatus=2				" Always show statusbar
@@ -151,6 +166,12 @@ nmap <silent> <leader>b :TagbarToggle<CR>
 " Close tagbar when jumo to a tag
 let g:tagbar_autoclose = 1
 let g:tagbar_sort = 0
+
+" ----- junegunn/fzf -----
+"  Mappings
+nmap ; :Buffers<CR>
+nmap <Leader>f :Files<CR>
+nmap <Leader>r :Tags<CR>
 
 " ----- lervag/vimtex -----
 "  Continuous compilation
@@ -190,7 +211,7 @@ let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 	\ 'javascript': ['prettier', 'remove_trailing_lines'],
 	\ 'json': ['prettier', 'remove_trailing_lines'],
-	\ 'python': ['isort', 'yapf', 'remove_trailing_lines'],
+	\ 'python': ['yapf', 'remove_trailing_lines'],
 	\ 'css': ['prettier', 'remove_trailing_lines'],
 	\ 'tex': ['remove_trailing_lines'],
 	\ 'html': ['remove_trailing_lines'],
@@ -198,13 +219,28 @@ let g:ale_fixers = {
 
 " ----- davidhalter/jedi-vim -----
 " let g:jedi#use_splits_not_buffers = "right"
-autocmd FileType python setlocal completeopt-=preview
+augroup jedi
+	autocmd FileType python setlocal completeopt-=preview
+augroup END
+
 
 " ----- plasticboy/vim-markdown -----
 let g:vim_markdown_math = 1
 let g:vim_markdown_frontmatter = 1
 
 
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+augroup tabindent
+	autocmd FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+	autocmd FileType html setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+	autocmd FileType js setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+	autocmd FileType css setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+	autocmd FileType json setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+augroup END
 
 " ----- custom key mappings -----
 " set <M-j> = "\ej"
@@ -217,6 +253,12 @@ let g:vim_markdown_frontmatter = 1
 " command Q :q<CR>
 " command WQ :wq<CR>
 inoremap jj <ESC><CR>
-map <C-w> :bd<CR>:redraw<CR>
+map <C-w> :BD<CR>:redraw<CR>
+nmap <C-e> :e#<CR>
+
+nmap j gj
+nmap k gk
 
 set secure
+
+

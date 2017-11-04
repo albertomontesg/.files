@@ -2,10 +2,10 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export TERM="xterm-256color"
+export TERM="screen-256color"
 
 # Homebrew
-export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH/usr/local/sbin"
 export HOMEBREW_EDITOR='atom'
 
 # Preferred editor for local and remote sessions
@@ -16,5 +16,9 @@ else
 fi
 
 # SSH
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
+# Python virtualenv Wrapper
+export WORKON_HOME=$HOME/Development/Python/environments
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+source ~/.zsh_virtualenvwrapper

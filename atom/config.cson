@@ -53,7 +53,6 @@
     scrollSensitivity: 60
     softWrap: true
     softWrapAtPreferredLineLength: true
-    tabLength: 4
     tabType: "soft"
     zoomFontWhenCtrlScrolling: true
   "exception-reporting":
@@ -80,7 +79,7 @@
   "linter-pylint": {}
   "linter-ui-default":
     decorateOnTreeView: "None"
-    panelHeight: 300
+    panelHeight: 103
     showPanel: true
   "make-runner":
     hidePane: true

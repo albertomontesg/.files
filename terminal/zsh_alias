@@ -21,7 +21,8 @@ alias reload="source ~/.zshrc"
 alias services="brew services"
 alias preview="open -a Preview"
 alias htop="sudo htop"
-# alias vim="vim --servername VIM"
+alias vim="nvim"
+alias g="git"
 
 # Software update
 alias pip-update='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
