@@ -87,9 +87,9 @@ syntax on
 set number relativenumber
 " Show line number in INSERT mode, and relative line numbers in NORMAL mode
 augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+	autocmd!
+	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
 set cursorline
@@ -120,6 +120,7 @@ set clipboard=unnamed
 set backspace=indent,eol,start
 set ruler
 set termguicolors
+highlight Comment cterm=italic
 
 syntax on
 
@@ -129,7 +130,7 @@ if has('nvim')
 	let g:loaded_sensible=0
 endif
 
-let g:python_host_prog = '/usr/local/bin/python'
+let g:python_host_prog = '/usr/local/bin/python2'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 " ----- bling/vim-airline settings -----
@@ -148,8 +149,8 @@ map <Leader>t <plug>NERDTreeTabsToggle<CR>
 " Setup some default ignores
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|DS_Store|pyc)$',
+	\ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+	\ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|DS_Store|pyc)$',
 \}
 
 " Use the nearest .git directory as the cwd
@@ -191,11 +192,11 @@ let g:airline#extensions#hunks#non_zero_only = 1
 " ----- Raimondi/delimitMate settings -----
 let g:delimitMate_expand_cr = 1
 augroup mydelimitMate
-  au!
-  au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
-  au FileType tex let b:delimitMate_quotes = ""
-  au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
-  au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
+	au!
+	au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
+	au FileType tex let b:delimitMate_quotes = ""
+	au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
+	au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END
 
 " ----- jez/vim-superman settings -----
@@ -231,7 +232,7 @@ let g:vim_markdown_frontmatter = 1
 
 
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+	let g:ackprg = 'ag --vimgrep'
 endif
 
 augroup tabindent
