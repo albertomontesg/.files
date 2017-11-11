@@ -84,7 +84,7 @@
 	whitespace = fix
 
 [core]
-	editor = nano
+	editor = nvim
 	excludesfile = /Users/Alberto/.gitignore_global
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore

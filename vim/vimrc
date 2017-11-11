@@ -19,8 +19,8 @@
         Plugin 'scrooloose/nerdtree'
         Bundle 'jistr/vim-nerdtree-tabs'
         Plugin 'Xuyuanp/nerdtree-git-plugin'
-        Plugin 'ctrlpvim/ctrlp.vim'
         Plugin 'majutsushi/tagbar'
+        Plugin 'kien/ctrlp.vim'
         Plugin 'junegunn/fzf'
         Plugin 'valloric/youcompleteme'
         " Plugin 'mileszs/ack.vim'
@@ -115,6 +115,7 @@
 
 
 " Mappings {{{
+        " nnoremap <C-p> :FZF<CR>
         nnoremap <leader><space> :nohlsearch<CR>
         inoremap jj <ESC><CR>
         map <C-w> :BD<CR>:redraw<CR>
