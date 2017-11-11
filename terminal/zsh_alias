@@ -21,7 +21,6 @@ alias reload="source ~/.zshrc"
 alias services="brew services"
 alias preview="open -a Preview"
 alias htop="sudo htop"
-alias vim="nvim"
 alias g="git"
 
 # Software update

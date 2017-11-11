@@ -1,0 +1,4 @@
+" Google Style Guide: https://google.github.io/styleguide/jsguide.html
+setlocal shiftwidth=2
+setlocal tabstop=2
+setlocal softtabstop=2
