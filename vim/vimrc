@@ -26,6 +26,8 @@
         " Plugin 'mileszs/ack.vim'
         Plugin 'qpkorr/vim-bufkill'
         Plugin 'tpope/vim-eunuch'
+        Plugin 'SirVer/ultisnips'
+        Plugin 'honza/vim-snippets'
         " Vim as a programmer's text editor
         Plugin 'tpope/vim-sensible'
         Plugin 'tpope/vim-commentary'
