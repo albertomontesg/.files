@@ -74,7 +74,7 @@ chunkc tiling::rule --owner Transmission --state float
 chunkc tiling::rule --owner iBooks --state float
 chunkc tiling::rule --owner \"App Store\" --state float
 chunkc tiling::rule --owner \"Alfred Preferences\" --state float
-# chunkc tiling::rule --owner iTerm2 --state tile
+chunkc tiling::rule --owner Firefox --state tile
 
 #
 # NOTE: specify plugins to load when chunkwm starts.

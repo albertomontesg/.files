@@ -22,3 +22,6 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 export WORKON_HOME=$HOME/Development/Python/environments
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 source ~/.zsh_virtualenvwrapper
+
+# Project Plugin
+export PROJECTS="$HOME/Workspace/Projects"
