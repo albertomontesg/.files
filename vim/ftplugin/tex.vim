@@ -2,4 +2,4 @@
 setlocal formatoptions=ant
 setlocal textwidth=80
 setlocal wrapmargin=0
-setlocal foldcolumn=10
+" setlocal foldcolumn=10
