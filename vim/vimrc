@@ -21,8 +21,11 @@
         Plugin 'scrooloose/nerdtree'
         Bundle 'jistr/vim-nerdtree-tabs'
         Plugin 'majutsushi/tagbar'
+        Plugin 'w0rp/ale'
         Plugin 'junegunn/fzf.vim'
-        Plugin 'valloric/youcompleteme'
+        if has('nvim')
+                Plugin 'roxma/nvim-completion-manager'
+        endif
         Plugin 'qpkorr/vim-bufkill'
         Plugin 'tpope/vim-eunuch'
         Plugin 'SirVer/ultisnips'
@@ -47,13 +50,17 @@
         Plugin 'tpope/vim-fugitive'
         " tmux
         Plugin 'christoomey/vim-tmux-navigator'
-        " Syntax
-        Plugin 'w0rp/ale'
         " Markdown
         Plugin 'godlygeek/tabular'
         Plugin 'plasticboy/vim-markdown'
         " Web Development
         Plugin 'othree/html5.vim'
+        Plugin 'othree/csscomplete.vim'
+        Plugin 'roxma/nvim-cm-tern'
+        " C/C++
+        Plugin 'roxma/ncm-clang'
+        " Github
+        Plugin 'roxma/ncm-github'
 
         call vundle#end()
 " }}}
@@ -94,7 +101,9 @@
         " search
         set incsearch
         set hlsearch
-        set inccommand=split
+        if has('nvim')
+                set inccommand=split
+        endif
         " folding
         set foldenable
         set foldlevelstart=10
@@ -133,14 +142,4 @@
 
         nmap j gj
         nmap k gk
-
-        nnoremap <leader>b :Buffers<CR>
-        nnoremap <leader>c :History:<CR>
-        nnoremap <leader>f :Files<CR>
-        nnoremap <leader>g :GFiles<CR>
-        nnoremap <leader>h :History<CR>
-        nnoremap <leader>l :BLines<CR>
-        nnoremap <leader>L :Lines<CR>
-        nnoremap <leader>m :Maps<CR>
-        nnoremap <leader>r :Ag<CR>
 " }}}
