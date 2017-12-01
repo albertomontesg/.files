@@ -32,4 +32,4 @@ alias apm-update='apm upgrade -c false; apm clean'
 alias pub-key="cat ~/.ssh/id_rsa.pub | pbcopy"
 
 # Use the binary time function instead of the reserved bash time
-alias time='/usr/bin/time'
+alias time='/usr/local/bin/time'

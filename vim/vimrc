@@ -1,3 +1,4 @@
+
 " Information {{{
 "       Author: Alberto Montes
 " }}}
@@ -17,6 +18,7 @@
         Plugin 'morhetz/gruvbox'
         Plugin 'ajmwagar/vim-deus'
         Plugin 'ryanoasis/vim-devicons'
+        Plugin 'blueyed/vim-diminactive'
         " IDE: utils
         Plugin 'scrooloose/nerdtree'
         Bundle 'jistr/vim-nerdtree-tabs'
@@ -28,7 +30,9 @@
         endif
         Plugin 'qpkorr/vim-bufkill'
         Plugin 'tpope/vim-eunuch'
-        Plugin 'SirVer/ultisnips'
+        if has('python') || has('python3')
+                Plugin 'SirVer/ultisnips'
+        endif
         Plugin 'honza/vim-snippets'
         Plugin '907th/vim-auto-save'
         Plugin 'machakann/vim-highlightedyank'
@@ -39,7 +43,7 @@
         Plugin 'xolox/vim-misc'
         Plugin 'tpope/vim-surround'
         Plugin 'editorconfig/editorconfig-vim'
-        " Plugin 'Valloric/YouCompleteMe'
+        Plugin 'tmux-plugins/vim-tmux-focus-events'
         Plugin 'tpope/vim-unimpaired'
         Plugin 'rizzatti/dash.vim'
         Plugin 'Raimondi/delimitMate'
@@ -68,11 +72,13 @@
 " General Settings {{{
         filetype plugin indent on
         " UI config
-        set background=dark
         set t_Co=256
-        set termguicolors
-        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+        if version >= 800
+                set termguicolors
+                " let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+                " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+        endif
+        set background=dark
         colorscheme deus
         let g:deus_termcolors=256
         syntax on
@@ -115,7 +121,6 @@
 
         set backspace=indent,eol,start
         set ruler
-        set termguicolors
         highlight Comment cterm=italic
 
         syntax on
