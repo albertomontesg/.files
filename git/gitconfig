@@ -85,7 +85,7 @@
 
 [core]
 	editor = nvim
-	excludesfile = /Users/Alberto/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
@@ -198,3 +198,10 @@
 	name = Alberto Montes
 	email = alm59321@gmail.com
 	signingkey = 16309624
+
+[gitflow "prefix"]
+	feature = feature-
+	release = release-
+	hotfix = hotfix-
+	support = support-
+        versiontag = v
