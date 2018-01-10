@@ -10,50 +10,77 @@
         set runtimepath+=/usr/local/opt/fzf
         call vundle#begin()
 
+        " Plugin Management:
         Plugin 'VundleVim/Vundle.vim'
-        " UI: airline + theme
+
+        " UI:
+        " Airline
         Plugin 'vim-airline/vim-airline'
         Plugin 'vim-airline/vim-airline-themes'
-        Plugin 'Xuyuanp/nerdtree-git-plugin'
+        " Colorschemes
         Plugin 'morhetz/gruvbox'
         Plugin 'ajmwagar/vim-deus'
+        " NerdTree with icons and git
+        Plugin 'Xuyuanp/nerdtree-git-plugin'
         Plugin 'ryanoasis/vim-devicons'
-        Plugin 'blueyed/vim-diminactive'
-        " IDE: utils
         Plugin 'scrooloose/nerdtree'
-        Bundle 'jistr/vim-nerdtree-tabs'
+        Plugin 'jistr/vim-nerdtree-tabs'
+        " Active pane highlight
+        Plugin 'blueyed/vim-diminactive'
+
+        " IDE:
+        " Tags
         Plugin 'majutsushi/tagbar'
+        " Syntax linter and fix
         Plugin 'w0rp/ale'
+        " Fuzzy Finding
         Plugin 'junegunn/fzf.vim'
+        " Completion
         if has('nvim')
                 Plugin 'roxma/nvim-completion-manager'
         endif
-        Plugin 'qpkorr/vim-bufkill'
-        Plugin 'tpope/vim-eunuch'
+        " Snippets
         if has('python') || has('python3')
                 Plugin 'SirVer/ultisnips'
         endif
         Plugin 'honza/vim-snippets'
-        Plugin '907th/vim-auto-save'
-        Plugin 'machakann/vim-highlightedyank'
-        " Vim as a programmer's text editor
+
+        " VIM: as programmer editor
+        " Defaults
         Plugin 'tpope/vim-sensible'
+        " UNIX shell commands
+        Plugin 'tpope/vim-eunuch'
+        " Comments
         Plugin 'tpope/vim-commentary'
-        Plugin 'terryma/vim-multiple-cursors'
-        Plugin 'xolox/vim-misc'
+        " Quoting surround
         Plugin 'tpope/vim-surround'
-        Plugin 'editorconfig/editorconfig-vim'
-        Plugin 'tmux-plugins/vim-tmux-focus-events'
+        " Pairs of handy bracket mappings
         Plugin 'tpope/vim-unimpaired'
-        Plugin 'rizzatti/dash.vim'
+        " Close buffers
+        Plugin 'qpkorr/vim-bufkill'
+        " Auto save
+        Plugin '907th/vim-auto-save'
+        " Highlight yank text
+        Plugin 'machakann/vim-highlightedyank'
+        " Multiple cursors
+        Plugin 'terryma/vim-multiple-cursors'
+        " Miscellaneus
+        Plugin 'xolox/vim-misc'
+        " tmux integration
+        Plugin 'tmux-plugins/vim-tmux-focus-events'
+        " Closing quotes and parenthesis
         Plugin 'Raimondi/delimitMate'
-        " LaTeX
-        Plugin 'lervag/vimtex'
-        " Git
+        " Git integration
         Plugin 'airblade/vim-gitgutter'
         Plugin 'tpope/vim-fugitive'
-        " tmux
+        " tmux integration
         Plugin 'christoomey/vim-tmux-navigator'
+
+        " Programming Languages:
+        " LaTeX
+        Plugin 'lervag/vimtex'
+        " tmux
+        Plugin 'tmux-plugins/vim-tmux'
         " Markdown
         Plugin 'godlygeek/tabular'
         Plugin 'plasticboy/vim-markdown'
@@ -63,8 +90,8 @@
         Plugin 'roxma/nvim-cm-tern'
         " C/C++
         Plugin 'roxma/ncm-clang'
-        " Github
-        Plugin 'roxma/ncm-github'
+        " Go
+        Plugin 'fatih/vim-go'
 
         call vundle#end()
 " }}}
@@ -79,8 +106,8 @@
                 " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
         endif
         set background=dark
-        colorscheme deus
-        let g:deus_termcolors=256
+        colorscheme gruvbox
+        " let g:deus_termcolors=256
         syntax on
         set laststatus=2        " Always show statusbar
         " Config number lines
@@ -146,6 +173,38 @@
         nnoremap <leader><space> :nohlsearch<CR>
         map <C-w> :BD<CR>:redraw<CR>
 
+        " Visual vertical movement for long lines
         nmap j gj
         nmap k gk
+
+        " Keep selected text selected when fixing indentation
+        vnoremap < <gv
+        vnoremap > >gv
+
+        if has('nvim')
+                tnoremap <Esc> <C-\><C-n>
+                tnoremap <M-[> <Esc>
+                tnoremap <C-v><Esc> <Esc>
+
+                " Terminal mode:
+                tnoremap <M-h> <c-\><c-n><c-w>h
+                tnoremap <M-j> <c-\><c-n><c-w>j
+                tnoremap <M-k> <c-\><c-n><c-w>k
+                tnoremap <M-l> <c-\><c-n><c-w>l
+                " Insert mode:
+                inoremap <M-h> <Esc><c-w>h
+                inoremap <M-j> <Esc><c-w>j
+                inoremap <M-k> <Esc><c-w>k
+                inoremap <M-l> <Esc><c-w>l
+                " Visual mode:
+                vnoremap <M-h> <Esc><c-w>h
+                vnoremap <M-j> <Esc><c-w>j
+                vnoremap <M-k> <Esc><c-w>k
+                vnoremap <M-l> <Esc><c-w>l
+                " Normal mode:
+                nnoremap <M-h> <c-w>h
+                nnoremap <M-j> <c-w>j
+                nnoremap <M-k> <c-w>k
+                nnoremap <M-l> <c-w>l
+        endif
 " }}}
