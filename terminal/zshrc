@@ -28,7 +28,7 @@ export UPDATE_ZSH_DAYS=3
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -60,7 +60,7 @@ source ~/.zsh_exports
 [ -f ~/.zsh_local ] && source ~/.zsh_local
 
 # Z command (https://github.com/rupa/z)
-. `brew --prefix`/etc/profile.d/z.sh
+# . `brew --prefix`/etc/profile.d/z.sh
 
 ##### Personalize ZSH plugins ######
 # tmux

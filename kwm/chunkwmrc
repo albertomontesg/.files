@@ -21,11 +21,11 @@ chunkc set global_desktop_mode           bsp
 
 # chunkc set 1_desktop_tree                ~/.chunkwm_layouts/dev_1
 
-chunkc set global_desktop_offset_top     20
-chunkc set global_desktop_offset_bottom  20
-chunkc set global_desktop_offset_left    20
-chunkc set global_desktop_offset_right   20
-chunkc set global_desktop_offset_gap     15
+chunkc set global_desktop_offset_top      30
+chunkc set global_desktop_offset_bottom   30
+chunkc set global_desktop_offset_left     30
+chunkc set global_desktop_offset_right    30
+chunkc set global_desktop_offset_gap      15
 
 chunkc set 1_desktop_offset_top          100
 chunkc set 1_desktop_offset_bottom       100
