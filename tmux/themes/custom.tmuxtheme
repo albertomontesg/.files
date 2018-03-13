@@ -1,0 +1,40 @@
+# -- design ----------------------------------------------------------------------------------------
+
+# Status update interval
+set -g status-interval 10
+
+# Status bar on the bottom
+set -g status-position bottom
+set -g status on
+set -g status-left-length 100
+set -g status-right-length 160
+set -g status-left-attr none
+set -g status-right-attr none
+
+# Basic status bar colors
+set -g status-fg brightwhite
+set -g status-bg black
+
+# Window status alignment
+set -g status-justify left
+
+# Message line
+set -g message-fg black
+set -g message-bg white
+
+# Borders
+set -g pane-border-bg black
+set -g pane-border-fg white
+set -g pane-active-border-bg black
+set -g pane-active-border-fg cyan
+
+# Empty left status line
+set -g status-left ""
+
+# Show info at right status line
+set -g status-right "#{prefix_highlight}  #(whoami) | #h | %R - %d-%h-%Y"
+
+# Show window names
+set -g window-status-format " #[default] #W "
+set -g window-status-current-format " #[fg=red] #W "
+

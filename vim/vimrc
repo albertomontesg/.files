@@ -15,18 +15,17 @@
 
         " UI:
         " Airline
-        Plugin 'vim-airline/vim-airline'
-        Plugin 'vim-airline/vim-airline-themes'
+        Plugin 'itchyny/lightline.vim'
+        Plugin 'mgee/lightline-bufferline'
         " Colorschemes
-        Plugin 'morhetz/gruvbox'
-        Plugin 'ajmwagar/vim-deus'
+        Plugin 'chriskempson/base16-vim'
         " NerdTree with icons and git
         Plugin 'Xuyuanp/nerdtree-git-plugin'
         Plugin 'ryanoasis/vim-devicons'
         Plugin 'scrooloose/nerdtree'
         Plugin 'jistr/vim-nerdtree-tabs'
         " Active pane highlight
-        Plugin 'blueyed/vim-diminactive'
+        " Plugin 'blueyed/vim-diminactive'
 
         " IDE:
         " Tags
@@ -68,13 +67,12 @@
         Plugin 'xolox/vim-misc'
         " tmux integration
         Plugin 'tmux-plugins/vim-tmux-focus-events'
+        Plugin 'christoomey/vim-tmux-navigator'
         " Closing quotes and parenthesis
         Plugin 'Raimondi/delimitMate'
         " Git integration
         Plugin 'airblade/vim-gitgutter'
         Plugin 'tpope/vim-fugitive'
-        " tmux integration
-        Plugin 'christoomey/vim-tmux-navigator'
 
         " Programming Languages:
         " LaTeX
@@ -99,26 +97,25 @@
 " General Settings {{{
         filetype plugin indent on
         " UI config
-        set t_Co=256
+        if !has('gui_running')
+                set t_Co=256
+        endif
         if v:version >= 800
                 set termguicolors
                 " let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
                 " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
         endif
+        " let g:lightline = {'colorscheme': 'materia'}
+        let base16colorspace=256  " Access colors present in 256 colorspace
         set background=dark
-        colorscheme gruvbox
-        " let g:deus_termcolors=256
+        " colorscheme gruvbox
+        colorscheme base16-materia
+        set noshowmode
         syntax on
         set laststatus=2        " Always show statusbar
+        set showtabline=2
         " Config number lines
         set number relativenumber
-        " Show line number in INSERT mode, and relative line numbers in NORMAL
-        " mode
-        " augroup numbertoggle
-        "         autocmd!
-        "         autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-        "         autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-        " augroup END
 
         " Tabulation
         set expandtab
@@ -130,7 +127,9 @@
         set lazyredraw
         set showmatch
         " Highlight all the columns after 'textwidth'
-        let &colorcolumn=join(map(copy(range(1, 256)), '"+" . v:val'), ',')
+        " let &colorcolumn=join(map(copy(range(1, 256)), '"+" . v:val'), ',')
+        set colorcolumn=+1
+        let &colorcolumn="80,".join(range(120,999),",")
         set encoding=utf-8
         " search
         set incsearch
@@ -149,7 +148,7 @@
 
         set backspace=indent,eol,start
         set ruler
-        highlight Comment cterm=italic
+        " highlight Comment cterm=italic
 
         syntax on
 
@@ -170,6 +169,18 @@
 " Mappings {{{
         let g:mapleader = "\<space>"
 
+        " Split navigation
+        " normal mode
+        nnoremap <M-Down> <C-W><C-J>
+        nnoremap <M-Up> <C-W><C-K>
+        nnoremap <M-Right> <C-W><C-L>
+        nnoremap <M-Left> <C-W><C-H>
+        " insert mode
+        inoremap <M-Down> <Esc><C-W><C-J>i
+        inoremap <M-Up> <Esc><C-W><C-K>i
+        inoremap <M-Right> <Esc><C-W><C-L>i
+        inoremap <M-Left> <Esc><C-W><C-H>i
+
         nnoremap <leader><space> :nohlsearch<CR>
         map <C-w> :BD<CR>:redraw<CR>
 
@@ -185,26 +196,5 @@
                 tnoremap <Esc> <C-\><C-n>
                 tnoremap <M-[> <Esc>
                 tnoremap <C-v><Esc> <Esc>
-
-                " Terminal mode:
-                tnoremap <M-h> <c-\><c-n><c-w>h
-                tnoremap <M-j> <c-\><c-n><c-w>j
-                tnoremap <M-k> <c-\><c-n><c-w>k
-                tnoremap <M-l> <c-\><c-n><c-w>l
-                " Insert mode:
-                inoremap <M-h> <Esc><c-w>h
-                inoremap <M-j> <Esc><c-w>j
-                inoremap <M-k> <Esc><c-w>k
-                inoremap <M-l> <Esc><c-w>l
-                " Visual mode:
-                vnoremap <M-h> <Esc><c-w>h
-                vnoremap <M-j> <Esc><c-w>j
-                vnoremap <M-k> <Esc><c-w>k
-                vnoremap <M-l> <Esc><c-w>l
-                " Normal mode:
-                nnoremap <M-h> <c-w>h
-                nnoremap <M-j> <c-w>j
-                nnoremap <M-k> <c-w>k
-                nnoremap <M-l> <c-w>l
         endif
 " }}}
