@@ -8,6 +8,7 @@
         filetype off
         set runtimepath+=~/.vim/bundle/Vundle.vim
         set runtimepath+=/usr/local/opt/fzf
+        set runtimepath+=~/.fzf
         call vundle#begin()
 
         " Plugin Management:
