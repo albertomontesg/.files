@@ -25,7 +25,7 @@
         Plugin 'scrooloose/nerdtree'
         Plugin 'jistr/vim-nerdtree-tabs'
         " Active pane highlight
-        " Plugin 'blueyed/vim-diminactive'
+        Plugin 'blueyed/vim-diminactive'
 
         " IDE:
         " Tags
@@ -75,6 +75,8 @@
         Plugin 'tpope/vim-fugitive'
 
         " Programming Languages:
+        " Python
+        Plugin 'ehamberg/vim-cute-python'
         " LaTeX
         Plugin 'lervag/vimtex'
         " tmux
