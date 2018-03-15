@@ -15,7 +15,7 @@ let g:lightline.component_type   = {
         \ 'linter_errors': 'error',
         \ 'linter_ok': 'left',
         \ }
-let g:lightline#bufferline#shorten_path = 0
+let g:lightline#bufferline#shorten_path = 1
 let g:lightline#bufferline#show_number = 2
 let g:lightline.active = {
 \ 'right': [
