@@ -1,10 +1,32 @@
 " ----- itchyny/lightline.vim -----
 let g:lightline = {'colorscheme': 'materia'}
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
-let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
-let g:lightline.component_type   = {'buffers': 'tabsel'}
+let g:lightline.component_expand = {
+        \ 'buffers': 'lightline#bufferline#buffers',
+        \ 'linter_checking': 'lightline#ale#checking',
+        \ 'linter_warnings': 'lightline#ale#warnings',
+        \ 'linter_errors': 'lightline#ale#errors',
+        \ 'linter_ok': 'lightline#ale#ok',
+        \ }
+let g:lightline.component_type   = {
+        \ 'buffers': 'tabsel',
+        \ 'linter_checking': 'left',
+        \ 'linter_warnings': 'warning',
+        \ 'linter_errors': 'error',
+        \ 'linter_ok': 'left',
+        \ }
 let g:lightline#bufferline#shorten_path = 0
 let g:lightline#bufferline#show_number = 2
+let g:lightline.active = {
+\ 'right': [
+\ 	[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
+\	['percent', 'lineinfo'],
+\	['fileformat', 'fileencoding', 'filetype'],
+\ ]}
+let g:lightline#ale#indicator_checking = "\uf110"
+let g:lightline#ale#indicator_warnings = "\uf071"
+let g:lightline#ale#indicator_errors = "\uf05e"
+let g:lightline#ale#indicator_ok = "\uf00c"
 
 nmap <Leader>1 <Plug>lightline#bufferline#go(1)
 nmap <Leader>2 <Plug>lightline#bufferline#go(2)

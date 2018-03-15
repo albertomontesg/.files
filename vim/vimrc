@@ -18,6 +18,7 @@
         " Airline
         Plugin 'itchyny/lightline.vim'
         Plugin 'mgee/lightline-bufferline'
+        Plugin 'maximbaz/lightline-ale'
         " Colorschemes
         Plugin 'chriskempson/base16-vim'
         " NerdTree with icons and git
@@ -74,6 +75,8 @@
         " Git integration
         Plugin 'airblade/vim-gitgutter'
         Plugin 'tpope/vim-fugitive'
+        " Run async shell commands
+        Plugin 'skywind3000/asyncrun.vim'
 
         " Programming Languages:
         " Python

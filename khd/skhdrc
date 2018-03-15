@@ -1,6 +1,9 @@
 
+# open terminal iTerm
+cmd - return                :   open -na /Applications/iTerm.app
+
 # Reload kwmc and khd configs
-cmd + ctrl - r              :   khd -e "reload"
+cmd + ctrl - r              :   skhd -e "reload"
 cmd + ctrl + alt - r        :   sh ~/.chunkwmrc
 
 # Set Space Tiling Mode To BSP
