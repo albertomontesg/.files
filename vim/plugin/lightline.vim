@@ -7,6 +7,7 @@ let g:lightline.component_expand = {
         \ 'linter_warnings': 'lightline#ale#warnings',
         \ 'linter_errors': 'lightline#ale#errors',
         \ 'linter_ok': 'lightline#ale#ok',
+        \ 'asyncrun_status': 'lightline#asyncrun#status',
         \ }
 let g:lightline.component_type   = {
         \ 'buffers': 'tabsel',
@@ -19,15 +20,21 @@ let g:lightline#bufferline#shorten_path = 1
 let g:lightline#bufferline#show_number = 2
 let g:lightline.active = {
 \ 'right': [
-\ 	[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
+\ 	['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
 \	['percent', 'lineinfo'],
 \	['fileformat', 'fileencoding', 'filetype'],
+\       ['asyncrun_status']
 \ ]}
+" Lightline ALE indicators
 let g:lightline#ale#indicator_checking = "\uf110"
 let g:lightline#ale#indicator_warnings = "\uf071"
 let g:lightline#ale#indicator_errors = "\uf05e"
 let g:lightline#ale#indicator_ok = "\uf00c"
+" Lightline AsyncRun indicators
+let g:lightline#asyncrun#indicator_run = "\uf110"
+let g:lightline#asyncrun#indicator_none = " "
 
+" Change buffers mapping
 nmap <Leader>1 <Plug>lightline#bufferline#go(1)
 nmap <Leader>2 <Plug>lightline#bufferline#go(2)
 nmap <Leader>3 <Plug>lightline#bufferline#go(3)
