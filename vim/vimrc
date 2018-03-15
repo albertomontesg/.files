@@ -80,8 +80,6 @@
         Plugin 'skywind3000/asyncrun.vim'
 
         " Programming Languages:
-        " Python
-        Plugin 'ehamberg/vim-cute-python'
         " LaTeX
         Plugin 'lervag/vimtex'
         " tmux
