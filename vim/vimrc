@@ -95,6 +95,8 @@
         Plugin 'roxma/ncm-clang'
         " Go
         Plugin 'fatih/vim-go'
+        " CoffeeScript
+        Plugin 'kchmck/vim-coffee-script'
 
         call vundle#end()
 " }}}
