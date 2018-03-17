@@ -1,9 +1,21 @@
 #!/bin/bash
 
+#
+# NOTE: specify the absolutepath of the file to use for logging.
+#       'stdout' and 'stderr' are valid values.
+#
+chunkc core::log_file /usr/local/var/log/chunkwm/chunkwm.log
+
+#
+# NOTE: specify the desired level of logging.
+#
+#       - none, debug, warn, error
+#
+chunkc core::log_level warn
+
 # NOTE: specify the absolutepath to the directory to use when
 #       loading a plugin. '~' expansion is supported.
 #
-chunkc plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
 chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
 
 #
@@ -15,7 +27,6 @@ chunkc core::hotload 1
 #
 # NOTE: The following are config variables for the chunkwm-tiling plugin
 #
-
 chunkc set global_desktop_mode           bsp
 
 chunkc set global_desktop_offset_top      54
@@ -23,13 +34,6 @@ chunkc set global_desktop_offset_bottom   30
 chunkc set global_desktop_offset_left     30
 chunkc set global_desktop_offset_right    30
 chunkc set global_desktop_offset_gap      15
-
-# chunkc set 1_desktop_offset_top          100
-# chunkc set 1_desktop_offset_bottom       100
-# chunkc set 1_desktop_offset_left         100
-# chunkc set 1_desktop_offset_right        100
-# chunkc set 1_desktop_offset_gap          15
-
 
 chunkc set desktop_padding_step_size     10.0
 chunkc set desktop_gap_step_size         5.0
@@ -39,8 +43,10 @@ chunkc set bsp_optimal_ratio             1.618
 chunkc set bsp_split_mode                optimal
 chunkc set bsp_split_ratio               0.5
 
+chunkc set monitor_focus_cycle           1
 chunkc set window_focus_cycle            monitor
-chunkc set mouse_follows_focus           1
+
+chunkc set mouse_follows_focus           intrinsic
 chunkc set window_float_next             1
 chunkc set window_float_center           1
 chunkc set window_region_locked          0

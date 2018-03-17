@@ -22,14 +22,12 @@ cmd + ctrl - up             :   chunkc tiling::window --focus north
 cmd + ctrl - down           :   chunkc tiling::window --focus south
 
 # Send window to desktop
-cmd + alt - right           :   chunkc tiling::window --send-to-desktop next; \
-                                chunkc tiling::monitor --focus next
-cmd + alt - left            :   chunkc tiling::window --send-to-desktop prev; \
-                                chunkc tiling::monitor --focus prev
-cmd + alt - up              :   chunkc tiling::window --send-to-monitor 2 \
-                                chunkc tiling::monitor --focus 2
-cmd + alt - down            :   chunkc tiling::window --send-to-monitor 1 \
-                                chunkc tiling::monitor --focus 1
+cmd + alt - right :   chunkc tiling::window --send-to-desktop next
+cmd + alt - left  :   chunkc tiling::window --send-to-desktop prev
+cmd + alt - up    :   chunkc tiling::window --send-to-monitor 2; \
+                      chunkc tiling::monitor -f 2
+cmd + alt - down  :   chunkc tiling::window --send-to-monitor 1; \
+                      chunkc tiling::monitor -f 1
 
 # Change focus between displays
 cmd - up                    :   chunkc tiling::monitor -focus 2
@@ -52,15 +50,14 @@ alt - e                     :   chunkc tiling::desktop --equalize
 alt - s                     :   chunkc tiling::window --toggle sticky; \
                                 chunkc tiling::window --grid-layout 5:5:4:0:1:1
 
-# # Resize focused window to its container
-# cmd + alt + ctrl - l        :   kwmc window -r focused
-
-# # Resize containers
-# cmd + ctrl - h              :   kwmc window -c expand 0.05 west
-# cmd + ctrl - j              :   kwmc window -c expand 0.05 south
-# cmd + ctrl - k              :   kwmc window -c expand 0.05 north
-# cmd + ctrl - l              :   kwmc window -c expand 0.05 east
-# cmd + ctrl + shift - h      :   kwmc window -c reduce 0.05 west
-# cmd + ctrl + shift - j      :   kwmc window -c reduce 0.05 south
-# cmd + ctrl + shift - k      :   kwmc window -c reduce 0.05 north
-# cmd + ctrl + shift - l      :   kwmc window -c reduce 0.05 east
+# Resize containers
+# Increate region size
+cmd + ctrl - h : chunkc tiling::window --use-temporal-ratio 0.1 --adjust-window-edge west
+cmd + ctrl - j : chunkc tiling::window --use-temporal-ratio 0.1 --adjust-window-edge south
+cmd + ctrl - k : chunkc tiling::window --use-temporal-ratio 0.1 --adjust-window-edge north
+cmd + ctrl - l : chunkc tiling::window --use-temporal-ratio 0.1 --adjust-window-edge east
+# Decrease regions size
+cmd + ctrl + shift - h : chunkc tiling::window --use-temporal-ratio -0.1 --adjust-window-edge west
+cmd + ctrl + shift - j : chunkc tiling::window --use-temporal-ratio -0.1 --adjust-window-edge south
+cmd + ctrl + shift - k : chunkc tiling::window --use-temporal-ratio -0.1 --adjust-window-edge north
+cmd + ctrl + shift - l : chunkc tiling::window --use-temporal-ratio -0.1 --adjust-window-edge east
