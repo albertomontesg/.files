@@ -1,6 +1,6 @@
 
 # open terminal iTerm
-cmd - return                :   open -na /Applications/iTerm.app
+cmd - return                :   osascript -e 'tell application "iTerm" to create window with default profile'
 
 # Reload kwmc and khd configs
 cmd + ctrl - r              :   skhd -e "reload"
