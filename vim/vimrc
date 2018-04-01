@@ -31,6 +31,8 @@
         Plugin 'blueyed/vim-diminactive'
 
         " IDE:
+        " LSP
+        " Plugin 'autozimu/LanguageClient-neovim'
         " Tags
         Plugin 'majutsushi/tagbar'
         " Syntax linter and fix
@@ -38,9 +40,26 @@
         " Fuzzy Finding
         Plugin 'junegunn/fzf.vim'
         " Completion
+        " if has('nvim')
+        "         Plugin 'roxma/nvim-completion-manager'
+        " endif
         if has('nvim')
-                Plugin 'roxma/nvim-completion-manager'
+                Plugin 'Shougo/deoplete.nvim'
+        else
+                Plugin 'Shougo/deoplete.nvim'
+                Plugin 'roxma/nvim-yarp'
+                Plugin 'roxma/vim-hug-neovim-rpc'
         endif
+        Plugin 'zchee/deoplete-jedi'
+        Plugin 'Shougo/neco-vim'
+        Plugin 'zchee/deoplete-go'
+        Plugin 'zchee/deoplete-clang'
+        Plugin 'Shougo/neco-syntax'
+        Plugin 'mhartington/nvim-typescript'
+        Plugin 'zchee/deoplete-zsh'
+        Plugin 'wellle/tmux-complete.vim'
+        Plugin 'lionawurscht/deoplete-biblatex'
+        Plugin 'fszymanski/deoplete-emoji'
         " Snippets
         if has('python') || has('python3')
                 Plugin 'SirVer/ultisnips'
@@ -61,7 +80,7 @@
         " Close buffers
         Plugin 'qpkorr/vim-bufkill'
         " Auto save
-        Plugin '907th/vim-auto-save'
+        " Plugin '907th/vim-auto-save'
         " Highlight yank text
         Plugin 'machakann/vim-highlightedyank'
         " Multiple cursors
@@ -95,6 +114,7 @@
         Plugin 'roxma/ncm-clang'
         " Go
         Plugin 'fatih/vim-go'
+        Plugin 'nsf/gocode', {'rtp': 'vim/'}
         " CoffeeScript
         Plugin 'kchmck/vim-coffee-script'
 
@@ -142,6 +162,7 @@
         " search
         set incsearch
         set hlsearch
+        set ignorecase
         if has('nvim')
                 set inccommand=split
         endif
