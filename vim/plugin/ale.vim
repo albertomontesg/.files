@@ -12,6 +12,7 @@ let g:ale_fixers = {
 	\ 'json': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
 	\ 'python': ['isort', 'yapf', 'remove_trailing_lines', 'trim_whitespace'],
 	\ 'css': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
+        \ 'coffee': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'tex': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'html': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'vim': ['remove_trailing_lines', 'trim_whitespace'],

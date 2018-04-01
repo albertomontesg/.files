@@ -80,7 +80,7 @@
         " Close buffers
         Plugin 'qpkorr/vim-bufkill'
         " Auto save
-        " Plugin '907th/vim-auto-save'
+        Plugin '907th/vim-auto-save'
         " Highlight yank text
         Plugin 'machakann/vim-highlightedyank'
         " Multiple cursors

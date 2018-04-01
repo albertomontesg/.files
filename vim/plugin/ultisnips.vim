@@ -1,4 +1,4 @@
-let g:UltiSnipsExpandTrigger='<CR>'
+" let g:UltiSnipsExpandTrigger='<CR>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
 
