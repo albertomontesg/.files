@@ -1,8 +1,7 @@
 commands =
-  focus: "echo $(/usr/local/bin/chunkc tiling::query --window name)"
+  focus: "echo $(/usr/local/bin/chunkc tiling::query --window tag)"
 
-command: "echo " +
-         "$(#{ commands.focus}):::"
+command: "echo $(#{ commands.focus })"
 
 refreshFrequency: 1000
 
@@ -16,8 +15,7 @@ render: ( ) ->
   """
 
 update: ( output, domEl ) ->
-  window = output.split( /:::/g )[ 0 ]
-  window = window.split( /–/g )[ 0 ]
-  if window is "?" then window = ""
+  window = output
+  # In case there is no windows or chunkwm can not fetch its name
+  if window[0] is "?" then window = ""
   $( "#window-output" ).text(window)
-
