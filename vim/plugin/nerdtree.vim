@@ -1,5 +1,5 @@
 " ----- scrooloose/nerdtree -----
-let g:NERDTreeIgnore = ['\.pyc$', '^__pycache__$', '^.git$', '^.DS_Store$', '^\..*cache.*$', '^.eggs$', '^.*\.egg-info$']
+let g:NERDTreeIgnore = ['\.pyc$', '^__pycache__$', '^.git$', '^.DS_Store$', '^\..*cache.*$', '^.eggs$', '^.*\.egg-info$', '^.ipynb.*$']
 let g:NERDTreeShowHidden = 1
 
 augroup cursor_off_nerdtree

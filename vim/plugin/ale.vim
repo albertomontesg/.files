@@ -14,6 +14,8 @@ let g:ale_fixers = {
 	\ 'css': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
         \ 'coffee': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'tex': ['remove_trailing_lines', 'trim_whitespace'],
+	\ 'yml': ['remove_trailing_lines', 'trim_whitespace'],
+	\ 'yaml': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'html': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'vim': ['remove_trailing_lines', 'trim_whitespace'],
         \ 'sh': ['shfmt', 'remove_trailing_lines', 'trim_whitespace'],

@@ -27,50 +27,53 @@ chunkc core::hotload 0
 #
 # NOTE: The following are config variables for the chunkwm-tiling plugin
 #
-chunkc set global_desktop_mode           bsp
+chunkc set global_desktop_mode bsp
 
-chunkc set global_desktop_offset_top      60
-chunkc set global_desktop_offset_bottom   30
-chunkc set global_desktop_offset_left     30
-chunkc set global_desktop_offset_right    30
-chunkc set global_desktop_offset_gap      15
+chunkc set global_desktop_offset_top 60
+chunkc set global_desktop_offset_bottom 30
+chunkc set global_desktop_offset_left 30
+chunkc set global_desktop_offset_right 30
+chunkc set global_desktop_offset_gap 15
 
-chunkc set desktop_padding_step_size     10.0
-chunkc set desktop_gap_step_size         5.0
+chunkc set desktop_padding_step_size 10.0
+chunkc set desktop_gap_step_size 5.0
 
-chunkc set bsp_spawn_left                0
-chunkc set bsp_optimal_ratio             1.618
-chunkc set bsp_split_mode                optimal
-chunkc set bsp_split_ratio               0.5
+chunkc set bsp_spawn_left 0
+chunkc set bsp_optimal_ratio 1.618
+chunkc set bsp_split_mode optimal
+chunkc set bsp_split_ratio 0.5
 
-chunkc set monitor_focus_cycle           1
-chunkc set window_focus_cycle            monitor
+chunkc set monitor_focus_cycle 1
+chunkc set window_focus_cycle monitor
 
-chunkc set mouse_follows_focus           intrinsic
-chunkc set window_float_next             1
-chunkc set window_float_center           1
-chunkc set window_region_locked          0
+chunkc set mouse_follows_focus intrinsic
+chunkc set window_float_next 1
+chunkc set window_float_center 1
+chunkc set window_region_locked 0
 
-chunkc set preselect_border_color        0xffffff00
-chunkc set preselect_border_width        4
-chunkc set preselect_border_radius       4
+chunkc set preselect_border_color 0xffffff00
+chunkc set preselect_border_width 4
+chunkc set preselect_border_radius 4
 
 # signal dock to make windows topmost when floated
 # requires chwm-sa (https://github.com/koekeishiya/chwm-sa)
-chunkc set window_float_topmost          0
-chunkc set window_fade_inactive          0
-chunkc set window_fade_alpha             0.85
-chunkc set window_fade_duration          0.25
-chunkc set window_use_cgs_move           0
+chunkc set window_float_topmost 0
+chunkc set window_fade_inactive 0
+chunkc set window_fade_alpha 0.85
+chunkc set window_fade_duration 0.25
+chunkc set window_use_cgs_move 0
 
 #
 # NOTE: The following are config variables for the chunkwm-border plugin
 #
-chunkc set focused_border_color          0xff89ddff
-chunkc set focused_border_width          5
-chunkc set focused_border_radius         0
-chunkc set focused_border_skip_floating  0
+chunkc set focused_border_color 0xff89ddff
+chunkc set focused_border_width 5
+chunkc set focused_border_radius 0
+chunkc set focused_border_skip_floating 0
 
+# Background blur when windows opened
+# chunkc set wallpaper ~/Pictures/Wallpapers/wallhaven-629268.jpg
+# chunkc set wallpaper_blur       0.5
 
 #
 # NOTE: specify plugins to load when chunkwm starts.
@@ -78,6 +81,7 @@ chunkc set focused_border_skip_floating  0
 chunkc core::load border.so
 chunkc core::load tiling.so
 chunkc core::load ffm.so
+# chunkc core::load blur.so
 
 # Apps rules
 chunkc tiling::rule --owner \"System Preferences\" --state tile
@@ -91,11 +95,11 @@ chunkc tiling::rule --owner Firefox --state tile
 chunkc tiling::rule --owner Python --state float
 
 # Desktop rules
-chunkc tiling::rule --owner \"Google Chrome\" --desktop 1
-chunkc tiling::rule --owner Safari --desktop 1
-chunkc tiling::rule --owner iTerm --desktop 3
-chunkc tiling::rule --owner Python --desktop 4
-chunkc tiling::rule --owner Airmail --desktop 5
-chunkc tiling::rule --owner WhatsApp --desktop 6
-chunkc tiling::rule --owner Telegram --desktop 6
-chunkc tiling::rule --owner iTunes --desktop 7
+# chunkc tiling::rule --owner \"Google Chrome\" --desktop 1
+# chunkc tiling::rule --owner Safari --desktop 1
+# chunkc tiling::rule --owner iTerm --desktop 3
+# chunkc tiling::rule --owner Python --desktop 4
+# chunkc tiling::rule --owner Airmail --desktop 5
+# chunkc tiling::rule --owner WhatsApp --desktop 6
+# chunkc tiling::rule --owner Telegram --desktop 6
+# chunkc tiling::rule --owner iTunes --desktop 7
