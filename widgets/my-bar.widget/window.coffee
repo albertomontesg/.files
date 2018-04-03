@@ -1,5 +1,5 @@
 commands =
-  focus: "echo $(/usr/local/bin/chunkc tiling::query --window tag)"
+  focus: "echo $(/usr/local/bin/chunkc tiling::query --window tag 2> /dev/null)"
 
 command: "echo $(#{ commands.focus })"
 

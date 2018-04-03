@@ -1,15 +1,15 @@
 
 commands =
-  mode: "echo $(/usr/local/bin/chunkc tiling::query --desktop mode)"
-  spaces: "echo $(/usr/local/bin/chunkc tiling::query --desktops-for-monitor $(/usr/local/bin/chunkc tiling::query --monitor id))"
-  focused: "echo $(/usr/local/bin/chunkc tiling::query --desktop id)"
+  mode: "echo $(/usr/local/bin/chunkc tiling::query --desktop mode 2> /dev/null)"
+  spaces: "echo $(/usr/local/bin/chunkc tiling::query --desktops-for-monitor $(/usr/local/bin/chunkc tiling::query --monitor id 2> /dev/null) 2> /dev/null)"
+  focused: "echo $(/usr/local/bin/chunkc tiling::query --desktop id 2> /dev/null)"
 
 command: "echo " +
          "$(#{ commands.mode }):::" +
          "$(#{ commands.spaces }):::" +
          "$(#{ commands.focused })"
 
-refreshFrequency: 1000
+refreshFrequency: 2000
 
 render: ( ) ->
   """
