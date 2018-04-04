@@ -78,6 +78,9 @@ ZSH_HIGHLIGHT_STYLES[function]='fg=white,bold'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# zsh completion
+fpath=(/usr/local/share/zsh-completions $fpath)
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# iTerm2 integration
+[ -f ~/.iterm2_shell_integration.zsh ] && source "${HOME}/.iterm2_shell_integration.zsh"
 
