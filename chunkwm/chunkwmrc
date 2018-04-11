@@ -84,22 +84,11 @@ chunkc core::load ffm.so
 # chunkc core::load blur.so
 
 # Apps rules
-chunkc tiling::rule --owner \"System Preferences\" --state tile
-chunkc tiling::rule --owner Finder --name Copy --state float
-chunkc tiling::rule --owner Finder --state float
-chunkc tiling::rule --owner Transmission --state float
-chunkc tiling::rule --owner iBooks --state float
-chunkc tiling::rule --owner \"App Store\" --state float
-chunkc tiling::rule --owner \"Alfred Preferences\" --state float
-chunkc tiling::rule --owner Firefox --state tile
-chunkc tiling::rule --owner Python --state float
-
-# Desktop rules
-# chunkc tiling::rule --owner \"Google Chrome\" --desktop 1
-# chunkc tiling::rule --owner Safari --desktop 1
-# chunkc tiling::rule --owner iTerm --desktop 3
-# chunkc tiling::rule --owner Python --desktop 4
-# chunkc tiling::rule --owner Airmail --desktop 5
-# chunkc tiling::rule --owner WhatsApp --desktop 6
-# chunkc tiling::rule --owner Telegram --desktop 6
-# chunkc tiling::rule --owner iTunes --desktop 7
+# chunkc tiling::rule --owner \"System Preferences\" --state tile
+# chunkc tiling::rule --owner Finder --name Copy --state float
+# chunkc tiling::rule --owner Finder --state float
+# chunkc tiling::rule --owner Transmission --state float
+# chunkc tiling::rule --owner iBooks --state float
+# chunkc tiling::rule --owner \"App Store\" --state float
+# chunkc tiling::rule --owner \"Alfred Preferences\" --state float
+# chunkc tiling::rule --owner Python --state float
