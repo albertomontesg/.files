@@ -15,7 +15,10 @@ render: ( ) ->
   """
 
 update: ( output, domEl ) ->
-  window = output
+  if output.length > 100
+    window = output.substring(0, 128) + " ..."
+  else
+    window = output
   # In case there is no windows or chunkwm can not fetch its name
   if window[0] is "?" then window = ""
   $( "#window-output" ).text(window)

@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew osx python tmux gpg-agent ssh-agent zsh-syntax-highlighting zsh-autosuggestions project)
+plugins=(brew osx python tmux gpg-agent ssh-agent) # zsh-syntax-highlighting zsh-autosuggestions project)
 
 
 source $ZSH/oh-my-zsh.sh
@@ -58,9 +58,6 @@ source ~/.zsh_alias
 source ~/.zsh_functions
 source ~/.zsh_exports
 [ -f ~/.zsh_local ] && source ~/.zsh_local
-
-# Z command (https://github.com/rupa/z)
-# . `brew --prefix`/etc/profile.d/z.sh
 
 ##### Personalize ZSH plugins ######
 # tmux
@@ -82,5 +79,5 @@ ZSH_HIGHLIGHT_STYLES[function]='fg=white,bold'
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # iTerm2 integration
-[ -f ~/.iterm2_shell_integration.zsh ] && source "${HOME}/.iterm2_shell_integration.zsh"
+# [ -f ~/.iterm2_shell_integration.zsh ] && source "${HOME}/.iterm2_shell_integration.zsh"
 
