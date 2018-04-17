@@ -77,6 +77,8 @@
         Plugin 'tpope/vim-surround'
         " Pairs of handy bracket mappings
         Plugin 'tpope/vim-unimpaired'
+        " Align text
+        Plugin 'junegunn/vim-easy-align'
         " Close buffers
         Plugin 'qpkorr/vim-bufkill'
         " Auto save

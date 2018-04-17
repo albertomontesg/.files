@@ -1,4 +1,4 @@
 $pdf_previewer = "start open -a Skim";
-$pdflatex = 'pdflatex -interaction=nonstopmode -synctex=1';
+$pdflatex = 'pdflatex -interaction=nonstopmode -synctex=1 %O %S';
 $pdf_mode = 1;
 $bibtex_use = 2;
