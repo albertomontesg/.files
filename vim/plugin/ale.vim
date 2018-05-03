@@ -28,4 +28,6 @@ highlight ALEErrorSign ctermfg=1 ctermbg=18 guifg=#EC5F67 guibg=#2C393F
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-" nnoremap <silent> ld :ALEGoToDefinition<CR>
+
+" Linters params
+let g:ale_python_pylint_change_directory = 0
