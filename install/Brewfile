@@ -30,7 +30,7 @@ brew "perl"
 brew "r"
 brew "ruby"
 # Linters
-brew "chktex"
+# brew "chktex"
 brew "cppcheck"
 brew "hadolint"
 brew "jsonlint"
@@ -53,7 +53,7 @@ brew "bazel"
 # Python
 brew "autoenv"
 brew "boost-python", args: ["c++11", "with-python3"]
-brew "homebrew/science/matplotlib", args: ["with-pyqt", "with-python3", "with-tex"]
+# brew "homebrew/science/matplotlib", args: ["with-pyqt", "with-python3", "with-tex"]
 brew "numpy"
 brew "pyenv-virtualenv"
 brew "pyenv-virtualenvwrapper"
@@ -69,14 +69,14 @@ brew "django-completion"
 brew "docker-completion"
 brew "zsh-completions"
 # WM
-brew "crisidev/chunkwm/chunkwm", args: ["with-logging"]
+# brew "crisidev/chunkwm/chunkwm", args: ["with-logging"]
 brew "koekeishiya/formulae/khd"
 brew "koekeishiya/formulae/kwm"
 # Shell utilities
 brew "awscli"
 brew "chrome-cli"
 brew "coreutils"
-brew "cpulimit"
+# brew "cpulimit"
 brew "curl", args: ["with-openssl"]
 brew "fzf"
 brew "gnupg2"
@@ -104,17 +104,17 @@ brew "git"
 brew "git-extras"
 brew "git-lfs"
 # Databases
-brew "mongodb"
-brew "mysql"
-brew "leveldb"
-brew "lmdb"
-brew "postgresql"
-brew "sqlite"
+# brew "mongodb"
+# brew "mysql"
+# brew "leveldb"
+# brew "lmdb"
+# brew "postgresql"
+# brew "sqlite"
 # Server
-brew "apache-spark"
+# brew "apache-spark"
 cask "java"
-brew "hadoop"
-brew "nginx"
+# brew "hadoop"
+# brew "nginx"
 # TeX
 cask "mactex"
 brew "latex-mk"
@@ -129,8 +129,8 @@ brew "protobuf"
 # Extra
 brew "autoenv"
 brew "docker"
-brew "doxygen"
-brew "ethereum/ethereum/ethereum"
+# brew "doxygen"
+# brew "ethereum/ethereum/ethereum"
 brew "extract_url"
 brew "ffmpeg", args: ["with-openjpeg", "with-openssl"]
 brew "fontconfig"
@@ -141,21 +141,21 @@ brew "neofetch"
 brew "neovim"
 brew "openjpeg"
 brew "pandoc"
-brew "pass"
+# brew "pass"
 brew "pinentry-mac"
 brew "pinentry"
 brew "pipes-sh"
-brew "pkg-config"
+# brew "pkg-config"
 brew "pstree"
 brew "rdiff-backup"
 brew "speedtest_cli"
 brew "stress"
-brew "swig"
-brew "terraform"
+# brew "swig"
+# brew "terraform"
 brew "thefuck"
 brew "urlview"
-brew "vitetris"
-brew "wireshark"
+# brew "vitetris"
+# brew "wireshark"
 brew "xvid"
 brew "youtube-dl"
 
@@ -164,12 +164,12 @@ brew "youtube-dl"
 # Applications
 cask "alfred"
 cask "atom"
-cask "bitbar"
+# cask "bitbar"
 cask "dash"
 cask "docker"
 cask "dropbox"
-cask "evernote"
-cask "gimp"
+# cask "evernote"
+# cask "gimp"
 cask "google-chrome"
 cask "google-drive"
 cask "gpgtools"
@@ -177,15 +177,15 @@ cask "grammarly"
 cask "istat-menus"
 cask "iterm2"
 cask "keybase"
-cask "laverna"
+# cask "laverna"
 cask "markdown-service-tools"
 cask "mendeley-desktop"
-cask "messenger"
-cask "nteract"
-cask "openscad"
-cask "pibakery"
-cask "plex-media-server"
-cask "repetier-host"
+# cask "messenger"
+# cask "nteract"
+# cask "openscad"
+# cask "pibakery"
+# cask "plex-media-server"
+# cask "repetier-host"
 cask "rstudio"
 cask "skim"
 cask "skype"
@@ -194,13 +194,13 @@ cask "slic3r"
 cask "symboliclinker"
 cask "telegram-desktop"
 cask "transmission"
-cask "turbo-boost-switcher"
+# cask "turbo-boost-switcher"
 cask "virtualbox"
-cask "vivaldi"
+# cask "vivaldi"
 cask "vlc"
 cask "whatsapp"
-cask "wireshark-chmodbpf"
-cask "wireshark"
+# cask "wireshark-chmodbpf"
+# cask "wireshark"
 # Fonts
 cask "font-fira-code"
 cask "font-firacode-nerd-font"
@@ -225,13 +225,13 @@ cask "webpquicklook"
 cask "suspicious-package"
 
 ### Mac App Store ###
-mas "Encrypto", id: 935235287
-mas "iStudiez Pro", id: 402989379
-mas "Keynote", id: 409183694
-mas "Novabench", id: 411466132
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "PiPifier", id: 1160374471
-mas "The Unarchiver", id: 425424353
-mas "Todoist", id: 585829637
-mas "Xcode", id: 497799835
+# mas "Encrypto", id: 935235287
+# mas "iStudiez Pro", id: 402989379
+# mas "Keynote", id: 409183694
+# mas "Novabench", id: 411466132
+# mas "Numbers", id: 409203825
+# mas "Pages", id: 409201541
+# mas "PiPifier", id: 1160374471
+# mas "The Unarchiver", id: 425424353
+# mas "Todoist", id: 585829637
+# mas "Xcode", id: 497799835

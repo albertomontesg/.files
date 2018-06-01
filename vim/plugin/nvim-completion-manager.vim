@@ -1,2 +1,2 @@
 " ----- roxma/nvim-completion-manager -----
-set shortmess+=c
+" set shortmess+=c

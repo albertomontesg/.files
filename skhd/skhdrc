@@ -1,6 +1,6 @@
 
 # open terminal iTerm
-cmd - return                :   open -na /Applications/kitty.app
+cmd - return                :   osascript -e 'tell application "iTerm" to create window with default profile'
 
 # Reload kwmc and khd configs
 cmd + ctrl - r              :   skhd -e "reload"
@@ -45,7 +45,7 @@ alt - f                     :   chunkc tiling::window --toggle fullscreen
 alt - t                     :   chunkc tiling::window --toggle float;\
                                 chunkc tiling::window --grid-layout 4:4:1:1:2:2
 # Equaliza all windows on desktop
-alt - e                     :   chunkc tiling::desktop --equalize
+alt - q                     :   chunkc tiling::desktop --equalize
 # toggle sticky, float and resize to picture-in-picture size
 alt - s                     :   chunkc tiling::window --toggle sticky; \
                                 chunkc tiling::window --grid-layout 5:5:4:0:1:1

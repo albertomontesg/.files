@@ -7,18 +7,19 @@ let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '▲'
 "  Define fixers for different file types
 let g:ale_fixers = {
-        \ 'bash': ['shfmt', 'remove_trailing_lines', 'trim_whitespace'],
+  \ 'bash': ['shfmt', 'remove_trailing_lines', 'trim_whitespace'],
 	\ 'javascript': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
 	\ 'json': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
 	\ 'python': ['isort', 'yapf', 'remove_trailing_lines', 'trim_whitespace'],
 	\ 'css': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
-        \ 'coffee': ['remove_trailing_lines', 'trim_whitespace'],
+  \ 'coffee': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'tex': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'yml': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'yaml': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'html': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'vim': ['remove_trailing_lines', 'trim_whitespace'],
-        \ 'sh': ['shfmt', 'remove_trailing_lines', 'trim_whitespace'],
+  \ 'sh': ['shfmt', 'remove_trailing_lines', 'trim_whitespace'],
+  \ 'cpp': ['clang-format', 'remove_trailing_lines', 'trim_whitespace'],
 \}
 
 " Customize error sign

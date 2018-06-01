@@ -75,13 +75,16 @@ chunkc set focused_border_skip_floating 0
 # chunkc set wallpaper ~/Pictures/Wallpapers/wallhaven-629268.jpg
 # chunkc set wallpaper_blur       0.5
 
+chunkc set wallpaper ~/Pictures/Wallpapers/wallhaven-629268.jpg
+chunkc set wallpaper_blur 20.0
+
 #
 # NOTE: specify plugins to load when chunkwm starts.
 #
 chunkc core::load border.so
 chunkc core::load tiling.so
 chunkc core::load ffm.so
-# chunkc core::load blur.so
+chunkc core::load blur.so
 
 # Apps rules
 # chunkc tiling::rule --owner \"System Preferences\" --state tile
