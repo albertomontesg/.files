@@ -7,6 +7,7 @@ export TERM="xterm-256color"
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin"
+# export PATH="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH"
 export HOMEBREW_EDITOR='nvim'
 
 # Preferred editor for local and remote sessions
@@ -32,3 +33,5 @@ export FZF_CTRL_T_OPTS="--height 60% --preview '(highlight -O ansi -l {} 2> /dev
 
 # Spaceship prompt config
 export SPACESHIP_CHAR_SYMBOL=" "
+
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"

@@ -29,7 +29,7 @@ chunkc core::hotload 0
 #
 chunkc set global_desktop_mode bsp
 
-chunkc set global_desktop_offset_top 60
+chunkc set global_desktop_offset_top 30
 chunkc set global_desktop_offset_bottom 30
 chunkc set global_desktop_offset_left 30
 chunkc set global_desktop_offset_right 30
@@ -51,8 +51,8 @@ chunkc set window_float_next 1
 chunkc set window_float_center 1
 chunkc set window_region_locked 0
 
-chunkc set preselect_border_color 0xffffff00
-chunkc set preselect_border_width 4
+chunkc set preselect_border_color 0x00ffff00
+chunkc set preselect_border_width 0
 chunkc set preselect_border_radius 4
 
 # signal dock to make windows topmost when floated

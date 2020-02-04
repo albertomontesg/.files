@@ -42,6 +42,10 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 " Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -63,7 +67,7 @@ Plug 'junegunn/vim-easy-align'
 " Close buffers
 Plug 'qpkorr/vim-bufkill'
 " Auto save
-Plug '907th/vim-auto-save'
+" Plug '907th/vim-auto-save'
 " Highlight yank text
 Plug 'machakann/vim-highlightedyank'
 " Multiple cursors
@@ -80,16 +84,18 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 " Run async shell commands
 Plug 'skywind3000/asyncrun.vim'
+" Fade the unfocus panes
+Plug 'TaDaa/vimade'
 
 " Programming Languages:
 " Python
-Plug 'davidhalter/jedi-vim', {'on_ft': 'python'}
+" Plug 'davidhalter/jedi-vim', {'on_ft': 'python'}
 Plug 'zchee/deoplete-jedi'
 " C++
-Plug 'zchee/deoplete-clang'
+Plug 'Shougo/deoplete-clangx'
 " LaTeX
 Plug 'lervag/vimtex'
-Plug 'lionawurscht/deoplete-biblatex'
+" Plug 'lionawurscht/deoplete-biblatex'
 " tmux
 Plug 'tmux-plugins/vim-tmux'
 " nginx
@@ -140,11 +146,13 @@ set nowritebackup
 
 " reload files changed outside vim
 set autoread
+augroup fileread
 " Triger `autoread` when files changes on disk
-autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
-" Notification after file change
-autocmd FileChangedShellPost *
-  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+  autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+  " Notification after file change
+  autocmd FileChangedShellPost *
+    \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+augroup END
 
 
 " ================ Folding ==================
@@ -172,7 +180,7 @@ set encoding=utf-8
 
 syntax on
 set background=dark
-if (has("termguicolors"))
+if (has('termguicolors'))
   set termguicolors
 endif
 
@@ -242,7 +250,9 @@ set clipboard=unnamed
 iab wiht with
 iab whit with
 iab ture true
+iab Ture True
 iab flase false
+iab Flase False
 iab wieght weight
 iab hieght height
 iab tihs this
@@ -254,10 +264,10 @@ nnoremap <leader><space> :nohlsearch<CR>
 map <C-w> :BD<CR>:redraw<CR>
 
 " For now disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+" noremap <Up> <NOP>
+" noremap <Down> <NOP>
+" noremap <Left> <NOP>
+" noremap <Right> <NOP>
 
 " Vertical Movement
 nmap j gj
