@@ -6,35 +6,30 @@ set -g status-interval 10
 # Status bar on the bottom
 set -g status-position bottom
 set -g status on
-set -g status-left-length 100
+set -g status-left-length 160
 set -g status-right-length 160
-set -g status-left-attr none
-set -g status-right-attr none
+set -g status-left-style none
+set -g status-right-style none
 
 # Basic status bar colors
 set -g status-fg brightwhite
-set -g status-bg black
+set -g status-bg default
 
 # Window status alignment
-set -g status-justify left
+set -g status-justify centre
 
 # Message line
-set -g message-fg black
-set -g message-bg white
+set -g message-style 'fg=black bg=white'
 
 # Borders
-set -g pane-border-bg black
-set -g pane-border-fg white
-set -g pane-active-border-bg black
-set -g pane-active-border-fg cyan
-
-# Empty left status line
-set -g status-left "    "
+set -g pane-border-style 'bg=default fg=white'
+set -g pane-active-border-style 'bg=default fg=cyan'
 
 # Show info at right status line
-set -g status-right "#{prefix_highlight}  #(whoami) | #h | %R - %d-%h-%Y"
+set -g status-left " #[fg=green]#[bg=green,fg=black] #H #[fg=green,bg=default]#[default]"
+set -g status-right "#[fg=cyan]#[bg=cyan,fg=black] %R  %d-%h-%Y #[fg=cyan,bg=default]#[default] "
 
 # Show window names
-set -g window-status-format "#[bg=brightblack] #W #[default]"
-set -g window-status-current-format "#[fg=black,bg=brightwhite] #W #[default]"
+set -g window-status-format "#[fg=brightblack]#[default]#[bg=brightblack] #W #[fg=brightblack,bg=default]#[default]"
+set -g window-status-current-format "#[fg=brightwhite]#[default]#[fg=black,bg=brightwhite] #W #[fg=brightwhite,bg=default]#[default]"
 

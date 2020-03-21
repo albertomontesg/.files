@@ -11,10 +11,11 @@ call plug#begin()
 
 " UI:
 " Colorscheme
-Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'morhetz/gruvbox'
 " lightline
 Plug 'itchyny/lightline.vim'
-Plug 'shinchu/lightline-gruvbox.vim'
+" Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'mgee/lightline-bufferline'
 Plug 'maximbaz/lightline-ale'
 Plug 'albertomontesg/lightline-asyncrun'
@@ -192,11 +193,12 @@ endif
 
 " Configure Lightline appearance
 let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
+let g:lightline.colorscheme = 'dracula'
 " Color scheme
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_sign_column = 'bg0'
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme dracula
 
 
 set noshowmode
