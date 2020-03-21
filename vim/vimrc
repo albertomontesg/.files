@@ -26,6 +26,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 " Active pane highlight
 " Plug 'blueyed/vim-diminactive'
+Plug 'camspiers/animate.vim'
+Plug 'camspiers/lens.vim'
 
 " IDE:
 " Tags
